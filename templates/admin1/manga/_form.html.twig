@@ -1,0 +1,29 @@
+<div class="col-md-12 grid-margin stretch-card">
+    <div class="card">
+        <div class="card-body">
+            {{ form_start(form) }}
+            <div class="row">
+            <div class="form-group col-md-6">
+                   {{ form_row(form.nom) }}
+                </div>
+            <div class="form-group col-md-3">
+                   {{ form_row(form.saison) }}
+                </div>
+            <div class="form-group col-md-3">
+                   {{ form_row(form.episode) }}
+                </div>
+                <div class="form-group col-md-3">
+                    {{ form_row(form.type) }}
+                </div>
+            </div>
+            <div class="row">
+               <div class="col-md-2"> <button type="submit" class="btn btn-primary me-2">OK</button>
+            {{ form_end(form) }}</div>
+            <div class="col-md-2">
+                <a href="{{ path('admin_manga_index') }}"><i class="btn btn-danger">Retour</i></a>
+            </div>
+            </div>
+        </div>
+
+    </div>
+</div>

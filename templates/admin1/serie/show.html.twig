@@ -1,0 +1,40 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}serie{% endblock %}
+
+{% block body %}
+    <h1>serie</h1>
+
+    <table class="table">
+        <tbody>
+            <tr>
+                <th>Id</th>
+                <td>{{ serie.id }}</td>
+            </tr>
+            <tr>
+                <th>Nom</th>
+                <td>{{ serie.nom }}</td>
+            </tr>
+            <tr>
+                <th>Genre</th>
+                <td>{{ serie.genre }}</td>
+            </tr>
+            <tr>
+                <th>Type</th>
+                <td>{{ serie.type ? serie.type|join(', ') : '' }}</td>
+            </tr>
+            <tr>
+                <th>Saison</th>
+                <td>{{ serie.saison }}</td>
+            </tr>
+            <tr>
+                <th>Episode</th>
+                <td>{{ serie.episode }}</td>
+            </tr>
+        </tbody>
+    </table>
+<a href="{{ path('admin_serie_index') }}"><button type="submit" class="btn btn-primary me-2">Moifier</button></a>
+    Cancel
+    <a href="{{ path('admin_serie_index') }}"><button class="btn btn-danger">retourt</button></a>
+    {{ include('admin/serie/_delete_form.html.twig') }}
+{% endblock %}

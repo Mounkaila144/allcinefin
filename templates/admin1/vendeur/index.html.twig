@@ -1,0 +1,54 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}vendeur index{% endblock %}
+
+{% block body %}
+
+    <h2>
+        vendeur
+    </h2>
+
+
+                    <table class="table table-bordered">
+                        <thead>
+                        <tr>
+                            <th>Id</th>
+                            <th>Email</th>
+                            <th>Nom</th>
+                            <th>prenom</th>
+                            <th>Adresse</th>
+                            <th>Localisation</th>
+                            <th>Modifier</th>
+                            <th></th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        {% for vendeur in vendeurs %}
+
+                            <tr>
+                                <td>{{ vendeur.id }}</td>
+                                <td>{{ vendeur.email }}</td>
+                                <td>{{ vendeur.nom }}</td>
+                                <td>{{ vendeur.prenom }}</td>
+                                <td>{{ vendeur.adresse}}</td>
+                                <td>
+                                    <a href="{{ path('admin_vendeur_show', {'id': vendeur.id}) }}"><button type="submit" class="btn btn-primary me-2">Localiser</button></a>
+                                </td>
+                                <td>
+                                    <a href="{{ path('admin_vendeur_edit', {'id': vendeur.id}) }}"><button type="submit" class="btn btn-primary me-2">Modifier</button></a>
+                                </td>
+                                <td>
+                                    <form method="post" action="{{ path('admin_vendeur_delete', {'id': vendeur.id}) }}" onsubmit="return confirm('Voulez vous vaiment suprimer?');">
+                                        <input type="hidden" name="_token" value="{{ csrf_token('delete' ~ vendeur.id) }}">
+                                        <button type="submit" class="btn btn-danger me-2">Suprimer</button>
+                                    </form>
+                                </td>
+                            </tr>
+                        {% else %}
+                            <tr>
+                                <td colspan="7">no records found</td>
+                            </tr>
+                        {% endfor %}
+                        </tbody>
+                    </table>
+{% endblock %}

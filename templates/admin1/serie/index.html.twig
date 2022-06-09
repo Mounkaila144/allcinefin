@@ -1,0 +1,43 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}serie index{% endblock %}
+
+{% block body %}
+    <h2>
+        Serie
+    </h2>
+
+
+                    <table class="table table-bordered">
+                        <thead>
+                        <tr>
+                            <th>Id</th>
+                            <th>Nom</th>
+                            <th>Type</th>
+                            <th>Saison</th>
+                            <th>Episode</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        {% for serie in series %}
+                            <tr>
+                                <td>{{ serie.id }}</td>
+                                <td>{{ serie.nom }}</td>
+                                <td>{{ serie.type ? serie.type|join(', ') : '' }}</td>
+                                <td>{{ serie.saison }}</td>
+                                <td>{{ serie.episode }}</td>
+                                <td>
+                                    <a href="{{ path('admin_serie_edit', {'id': serie.id}) }}"><button type="submit" class="btn btn-primary me-2">Moifier</button></a>
+                                </td>
+                            </tr>
+                        {% else %}
+                            <tr>
+                                <td colspan="7">no records found</td>
+                            </tr>
+                        {% endfor %}
+                        </tbody>
+                    </table>
+
+
+    <a href="{{ path('admin_serie_new') }}"><button type="submit" class="btn btn-primary me-2">Ajouter</button></a>
+{% endblock %}

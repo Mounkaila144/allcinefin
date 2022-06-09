@@ -1,0 +1,21 @@
+{% extends 'user.html.twig' %}
+
+{% block title %}Hello MainController!{% endblock %}
+
+{% block body %}
+    <div class="container-scroller film bg-black ">
+
+        <div class="row ">
+            {%for serie in data %}
+                <div class="col">
+
+                  <ul>
+                      <li><a href="{{ path('user_serie_action', {'id': serie.id}) }}">{{ serie.name }}</a></li>
+                  </ul>
+                </div>
+            {% endfor%}
+
+        </div>
+
+    </div>
+{% endblock %}

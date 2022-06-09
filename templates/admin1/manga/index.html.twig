@@ -1,0 +1,43 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}manga index{% endblock %}
+
+{% block body %}
+    <h2>
+        manga
+    </h2>
+
+
+                    <table class="table table-bordered">
+                        <thead>
+                        <tr>
+                            <th>Id</th>
+                            <th>Nom</th>
+                            <th>Type</th>
+                            <th>Saison</th>
+                            <th>Episode</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        {% for manga in mangas %}
+                            <tr>
+                                <td>{{ manga.id }}</td>
+                                <td>{{ manga.nom }}</td>
+                                <td>{{ manga.type ? manga.type|join(', ') : '' }}</td>
+                                <td>{{ manga.saison }}</td>
+                                <td>{{ manga.episode }}</td>
+                                <td>
+                                    <a href="{{ path('admin_manga_edit', {'id': manga.id}) }}"><button type="submit" class="btn btn-primary me-2">Modifier</button></a>
+                                </td>
+                            </tr>
+                        {% else %}
+                            <tr>
+                                <td colspan="7">no records found</td>
+                            </tr>
+                        {% endfor %}
+                        </tbody>
+                    </table>
+
+
+    <a href="{{ path('admin_manga_new') }}"><button type="submit" class="btn btn-primary me-2">Ajouter</button></a>
+{% endblock %}

@@ -1,0 +1,40 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}article{% endblock %}
+
+{% block body %}
+    <h1>article</h1>
+
+    <table class="table">
+        <tbody>
+            <tr>
+                <th>Id</th>
+                <td>{{ article.id }}</td>
+            </tr>
+            <tr>
+                <th>Nom</th>
+                <td>{{ article.nom }}</td>
+            </tr>
+            <tr>
+                <th>Genre</th>
+                <td>{{ article.genre }}</td>
+            </tr>
+            <tr>
+                <th>Type</th>
+                <td>{{ article.type ? article.type|join(', ') : '' }}</td>
+            </tr>
+            <tr>
+                <th>Saison</th>
+                <td>{{ article.saison }}</td>
+            </tr>
+            <tr>
+                <th>Episode</th>
+                <td>{{ article.episode }}</td>
+            </tr>
+        </tbody>
+    </table>
+<a href="{{ path('admin_article_index') }}"><button type="submit" class="btn btn-primary me-2">Moifier</button></a>
+    Cancel
+    <a href="{{ path('admin_article_index') }}"><button class="btn btn-danger">retourt</button></a>
+    {{ include('admin/article/_delete_form.html.twig') }}
+{% endblock %}

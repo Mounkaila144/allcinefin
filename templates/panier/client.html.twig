@@ -1,0 +1,40 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}serie{% endblock %}
+
+{% block body %}
+    <table class="table table-bordered">
+        <tbody>
+        <tr>
+            <th>Id</th>
+            <td>{{ client.id }}</td>
+        </tr>
+        <tr>
+            <th>Nom</th>
+            <td>{{ client.nom }}</td>
+        </tr>
+        <tr>
+            <th>Prenom</th>
+            <td>{{ client.prenom }}</td>
+        </tr>
+        <tr>
+            <th>Email</th>
+            <td>{{ client.email }}</td>
+        </tr>
+        <tr>
+            <th>Telephone</th>
+            <td>{{ client.telephone }}</td>
+        </tr>
+        <tr>
+            <th>Adresse</th>
+            <td>{{ client.adresse }}</td>
+        </tr>
+        <tr>
+            <th>Localisation</th>
+            <td><a href="{{ path('admin_client_show', {'id': client.id}) }}"><button type="submit" class="btn btn-primary me-2">Localiser</button></a></td>
+        </tr>
+
+
+        </tbody>
+    </table>
+{% endblock %}

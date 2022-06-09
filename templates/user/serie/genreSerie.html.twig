@@ -1,0 +1,33 @@
+{% extends 'user.html.twig' %}
+
+{% block title %}Hello MainController!{% endblock %}
+
+{% block body %}
+    <div class="container-scroller serie bg-black ">
+
+        <div class="row ">
+            {%for serie in data %}
+                <div class="col">
+
+                    <div class="card movie_card">
+
+                        <img src='{{ debut }}{{ serie.poster_path }}' class="card-img-top" alt="...">
+                        <div class="card-img-bottom">
+                            <span class=""><a href="" class="link link-primary">{{ serie.title }}</a></span>
+                        </div>
+
+                    </div>
+
+                </div>
+            {% endfor%}
+
+        </div>
+        <div class="row">
+            <di class="col" style="margin-top: 20px">
+                {{ knp_pagination_render(data,"pagination.html.twig") }}
+            </di>
+
+        </div>
+
+    </div>
+{% endblock %}

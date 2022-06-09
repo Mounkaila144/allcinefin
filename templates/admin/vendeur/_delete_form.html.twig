@@ -1,0 +1,12 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Modifier{% endblock %}
+
+{% block body %}
+    <h2>voulez vous vraiment suprimer</h2>
+    <form method="post" action="{{ path('admin_client_delete', {'id': client.id}) }}" onsubmit="return confirm('Are you sure you want to delete this item?');">
+        <input type="hidden" name="_token" value="{{ csrf_token('delete' ~ client.id) }}">
+        <button type="submit" class="btn btn-primary me-2">Suprimer</button>
+    </form>
+
+{% endblock %}

@@ -1,0 +1,18 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}client index{% endblock %}
+
+{% block body %}
+    {% for client in clients %}
+        {% set data={
+            lat:client.lat,
+            lon:client.lon,
+            nom:client.nom
+        }
+        %}
+        <div data-coordo='{{ data|json_encode|replace({"'": "&#39;"})|raw }}'></div>
+    {% endfor %}
+
+    <div id="detailsMap"></div>
+
+{% endblock %}

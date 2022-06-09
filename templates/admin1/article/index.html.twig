@@ -1,0 +1,54 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}article index{% endblock %}
+
+{% block body %}
+    <h2>
+        article
+    </h2>
+
+    <div class="table-responsive">
+                    <table class="table table-bordered">
+                            <thead>
+                            <tr>
+                                <th>Id</th>
+                                <th>Nom</th>
+                                <th>Prix d'Achat</th>
+                                <th>Prix de Vente</th>
+                                <th>Image</th>
+                                <th>Quantite Initial</th>
+                                <th>Quantite Restant</th>
+                                <th></th>
+                            </tr>
+                            </thead>
+                            <tbody>
+                            {% for article in articles %}
+                                <tr>
+                                    <td>{{ article.id }}</td>
+                                    <td>{{ article.nom }}</td>
+                                    <td>{{ article.prisAchat }} CFA</td>
+                                    <td>{{ article.price }} CFA</td>
+                                    <td class="w-5"><img style="width: 70px; height: 70px" class="img-fluid img-thumbnail" src="{{ vich_uploader_asset(article, 'imageFile') }}" alt="{{ article.nom }}"></td>
+                                    <td>{{ article.quantiteInitial }}</td>
+                                    <td>{{ article.quantiteRestant }}</td>
+                                <td>
+                                    <a href="{{ path('admin_article_edit', {'id': article.id}) }}"><button type="submit" class="btn btn-primary me-2">Moifier</button></a>
+                                </td>
+                                <td>
+                                    <form method="post" action="{{ path('admin_article_delete', {'id': article.id}) }}" onsubmit="return confirm('Voulez vous vaiment suprimer?');">
+                                        <input type="hidden" name="_token" value="{{ csrf_token('delete' ~ article.id) }}">
+                                        <button type="submit" class="btn btn-danger me-2">Suprimer</button>
+                                    </form>
+                                </td>
+                            </tr>
+                        {% else %}
+                            <tr>
+                                <td colspan="7">no records found</td>
+                            </tr>
+                        {% endfor %}
+                        </tbody>
+                    </table>
+    </div>
+
+    <a href="{{ path('admin_article_new') }}"><button type="submit" class="btn btn-primary me-2">Ajouter</button></a>
+{% endblock %}

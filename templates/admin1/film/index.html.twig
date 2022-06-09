@@ -1,0 +1,40 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}film index{% endblock %}
+
+{% block body %}
+    <h2>
+        film
+    </h2>
+
+
+                    <table class="table table-bordered table-responsive">
+                        <thead>
+                        <tr>
+                            <th>Id</th>
+                            <th>Nom</th>
+                            <th>Type</th>
+                            <th>Modifier</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        {% for film in films %}
+                            <tr>
+                                <td >{{ film.id }}</td>
+                                <td>{{ film.nom }}</td>
+                                <td>{{ film.type ? film.type|join(', ') : '' }}</td>
+                                <td>
+                                    <a href="{{ path('admin_film_edit', {'id': film.id}) }}"><button type="submit" class="btn btn-primary me-2">Modifier</button></a>
+                                </td>
+                            </tr>
+                        {% else %}
+                            <tr>
+                                <td colspan="7">no records found</td>
+                            </tr>
+                        {% endfor %}
+                        </tbody>
+                    </table>
+
+
+    <a href="{{ path('admin_film_new') }}"><button type="submit" class="btn btn-primary me-2">Ajouter</button></a>
+{% endblock %}

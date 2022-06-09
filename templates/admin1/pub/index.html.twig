@@ -1,0 +1,44 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}pub index{% endblock %}
+
+{% block body %}
+    <h1>Pub index</h1>
+
+    <table class="table table-bordered">
+        <thead>
+        <tr>
+            <th>Id</th>
+            <th>Nom</th>
+            <th>Description</th>
+            <th>actions</th>
+        </tr>
+        </thead>
+        <tbody>
+        {% for pub in pubs %}
+            <tr>
+                <td>{{ pub.id }}</td>
+                <td>{{ pub.nom }}</td>
+                <td>{{ pub.description }}</td>
+                <td>{{ pub.updatedAt ? pub.updatedAt|date('Y-m-d H:i:s') : '' }}</td>
+                <td>
+                                <td>
+                                    <a href="{{ path('admin_pub_edit', {'id': pub.id}) }}"><button type="submit" class="btn btn-primary me-2">Moifier</button></a>
+                                </td>
+                                <td>
+                                    <form method="post" action="{{ path('admin_pub_delete', {'id': pub.id}) }}" onsubmit="return confirm('Voulez vous vaiment suprimer?');">
+                                        <input type="hidden" name="_token" value="{{ csrf_token('delete' ~ pub.id) }}">
+                                        <button type="submit" class="btn btn-danger me-2">Suprimer</button>
+                                    </form>
+                                </td>
+                            </tr>
+                        {% else %}
+                            <tr>
+                                <td colspan="7">no records found</td>
+                            </tr>
+                        {% endfor %}
+                        </tbody>
+                    </table>
+
+    <a href="{{ path('admin_pub_new') }}"><button type="submit" class="btn btn-primary me-2">Ajouter</button></a>
+{% endblock %}
