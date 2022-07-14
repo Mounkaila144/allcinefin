@@ -1,0 +1,20 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Hello VenteController!{% endblock %}
+
+{% block body %}
+    <div class="col-md-12 grid-margin stretch-card">
+        <div class="card">
+            <div class="card-body">
+                <div class="row">
+                   <form method="post" action="{{ path('buy', {'id': 52})}}">
+                       <input type="number" name="nom">
+                        <button type="submit" class="btn btn-primary me-2">OK</button>
+                   </form>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+{% endblock %}

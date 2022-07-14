@@ -35,10 +35,16 @@ class Article
     private $quantiteInitial;
 
     #[ORM\Column(type: 'integer')]
-    private $quantiteRestant;
+    private $quantiteVendue;
 
     #[ORM\Column(type: 'string', length: 100)]
     private $nom;
+
+    public function __toString(): string
+    {
+        return $this->getNom();
+    }
+
 
     /**
      * NOTE: This is not a mapped field of entity metadata, just a simple property.
@@ -48,6 +54,14 @@ class Article
 
     #[ORM\Column(type: 'string')]
     private ?string $imageName = null;
+
+    #[ORM\OneToMany(mappedBy: 'article', targetEntity: VenteArticle::class)]
+    private $venteArticles;
+
+    public function __construct()
+    {
+        $this->venteArticles = new ArrayCollection();
+    }
 
     /**
      * @return mixed
@@ -73,8 +87,6 @@ class Article
         $this->imageFile = $imageFile;
 
     }
-
-
 
     public function getImageFile(): ?File
     {
@@ -134,14 +146,14 @@ class Article
         return $this;
     }
 
-    public function getQuantiteRestant(): ?int
+    public function getQuantiteVendue(): ?int
     {
-        return $this->quantiteRestant;
+        return $this->quantiteVendue;
     }
 
-    public function setQuantiteRestant(int $quantiteRestant): self
+    public function setQuantiteVendue(int $quantiteVendue): self
     {
-        $this->quantiteRestant = $quantiteRestant;
+        $this->quantiteVendue = $quantiteVendue;
 
         return $this;
     }
@@ -154,6 +166,36 @@ class Article
     public function setNom(string $nom): self
     {
         $this->nom = $nom;
+
+        return $this;
+    }
+
+    /**
+     * @return Collection<int, VenteArticle>
+     */
+    public function getVenteArticles(): Collection
+    {
+        return $this->venteArticles;
+    }
+
+    public function addVenteArticle(VenteArticle $venteArticle): self
+    {
+        if (!$this->venteArticles->contains($venteArticle)) {
+            $this->venteArticles[] = $venteArticle;
+            $venteArticle->setArticle($this);
+        }
+
+        return $this;
+    }
+
+    public function removeVenteArticle(VenteArticle $venteArticle): self
+    {
+        if ($this->venteArticles->removeElement($venteArticle)) {
+            // set the owning side to null (unless already changed)
+            if ($venteArticle->getArticle() === $this) {
+                $venteArticle->setArticle(null);
+            }
+        }
 
         return $this;
     }

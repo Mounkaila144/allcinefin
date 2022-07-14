@@ -30,7 +30,7 @@
                                     <td>{{ article.price }} CFA</td>
                                     <td class="w-5"><img style="width: 70px; height: 70px" class="img-fluid img-thumbnail" src="{{ vich_uploader_asset(article, 'imageFile') }}" alt="{{ article.nom }}"></td>
                                     <td>{{ article.quantiteInitial }}</td>
-                                    <td>{{ article.quantiteRestant }}</td>
+                                    <td>{{ article.quantiteVendue }}</td>
                                 <td>
                                     <a href="{{ path('admin_article_edit', {'id': article.id}) }}"><button type="submit" class="btn btn-primary me-2">Moifier</button></a>
                                 </td>

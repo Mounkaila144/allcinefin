@@ -1,8 +1,8 @@
 document.addEventListener('DOMContenLoaded',valeur=function (e) {
     var user_latlon = document.querySelectorAll('[data-coordo]');
     var coordonner = Array.from(user_latlon).map(item => JSON.parse(item.dataset.coordo));
-return coordonner;
-    })
+    return coordonner;
+})
 let v=valeur();
 var mymap = L.map('detailsMap').setView([13.5539143,2.1305520], 17);
 

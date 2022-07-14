@@ -1,0 +1,47 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}New VenteArticle{% endblock %}
+
+{% block body %}
+    <h2>
+        article
+    </h2>
+
+    <div class="table-responsive">
+        <table class="table table-bordered">
+            <thead>
+            <tr>
+                <th>Id</th>
+                <th>Nom</th>
+                <th>Prix de Vente</th>
+                <th>Image</th>
+                <th>Quantite Restant</th>
+                <th></th>
+            </tr>
+            </thead>
+            <tbody>
+            {% for article in articles %}
+                <tr>
+                    <td>{{ article.id }}</td>
+                    <td>{{ article.nom }}</td>
+                    <td>{{ article.price }} CFA</td>
+                    <td class="w-5"><img style="width: 70px; height: 70px" class="img-fluid img-thumbnail" src="{{ vich_uploader_asset(article, 'imageFile') }}" alt="{{ article.nom }}"></td>
+                    {% set restant=article.quantiteInitial - article.quantiteVendue %}
+                    <td>{{ restant }}</td>
+                    <td>
+                        <form method="post" action="{{ path('add', {'id': article.id})}}">
+                            <input type="number" min="1" max="1000" required name="nom">
+                            <button type="submit" class="btn btn-primary me-2">OK</button>
+                        </form>
+                    </td>
+                </tr>
+            {% else %}
+                <tr>
+                    <td colspan="7">no records found</td>
+                </tr>
+            {% endfor %}
+            </tbody>
+        </table>
+    </div>
+
+{% endblock %}

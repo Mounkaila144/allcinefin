@@ -1,0 +1,11 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}New VenteFilm{% endblock %}
+
+{% block body %}
+    <h1>Create new VenteFilm</h1>
+
+    {{ include('vente_film/_form.html.twig') }}
+
+    <a href="{{ path('app_vente_film_index') }}">back to list</a>
+{% endblock %}

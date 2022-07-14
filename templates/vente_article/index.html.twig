@@ -1,0 +1,36 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}VenteArticle index{% endblock %}
+
+{% block body %}
+    <h1>VenteArticle index</h1>
+
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>UpdatAt</th>
+                <th>Utilusateur</th>
+                <th>Article</th>
+                <th>Quantite</th>
+                <th>Prix Total</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for vente_article in vente_articles %}
+            <tr>
+                <td>{{ vente_article.id }}</td>
+                <td>{{ vente_article.updatAt ? vente_article.updatAt|date('d-m-y H:i:s') : '' }}</td>
+                <td>{{ vente_article.user.nom }}</td>
+                <td>{{ vente_article.article.nom }}</td>
+                <td>{{ vente_article.quantite }}</td>
+                <td>{{ vente_article.quantite * vente_article.article.price}} Cfa</td>
+            </tr>
+        {% else %}
+            <tr>
+                <td colspan="3">no records found</td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+{% endblock %}

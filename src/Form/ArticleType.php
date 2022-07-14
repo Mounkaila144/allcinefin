@@ -17,7 +17,7 @@ class ArticleType extends AbstractType
             ->add('prisAchat')
             ->add('price')
             ->add('quantiteInitial')
-            ->add('quantiteRestant')
+            ->add('quantiteVendue')
             ->add('imageFile', VichFileType::class, [
                 'required' => false,
                 'allow_delete' => true,

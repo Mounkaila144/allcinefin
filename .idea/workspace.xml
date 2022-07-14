@@ -1,28 +1,69 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="5a86381a-87a8-4208-8690-425eae3f060d" name="Changes" comment="new1" />
+    <list default="true" id="5a86381a-87a8-4208-8690-425eae3f060d" name="Changes" comment="new1">
+      <change afterPath="$PROJECT_DIR$/templates/vente/add.html.twig" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/vente/post.html.twig" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/vente_article/addStoke.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/js/Page/Extrait.js" beforeDir="false" afterPath="$PROJECT_DIR$/assets/js/Page/Extrait.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/js/Page/Login.js" beforeDir="false" afterPath="$PROJECT_DIR$/assets/js/Page/Login.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/js/Page/Materiel/DetailMateriel.js" beforeDir="false" afterPath="$PROJECT_DIR$/assets/js/Page/Materiel/DetailMateriel.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/js/Page/Materiel/Original.js" beforeDir="false" afterPath="$PROJECT_DIR$/assets/js/Page/Materiel/Original.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/js/Page/Panier.js" beforeDir="false" afterPath="$PROJECT_DIR$/assets/js/Page/Panier.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/js/Page/produis.js" beforeDir="false" afterPath="$PROJECT_DIR$/assets/js/Page/produis.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/js/components/Cart/Data.js" beforeDir="false" afterPath="$PROJECT_DIR$/assets/js/components/Cart/Data.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/js/components/Pagination.js" beforeDir="false" afterPath="$PROJECT_DIR$/assets/js/components/Pagination.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/js/components/card/MaterialCard.js" beforeDir="false" afterPath="$PROJECT_DIR$/assets/js/components/card/MaterialCard.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/js/components/card/PubCard.js" beforeDir="false" afterPath="$PROJECT_DIR$/assets/js/components/card/PubCard.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/js/components/ivoice/index.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/assets/js/components/ivoice/index.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/packages/nelmio_cors.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/config/packages/nelmio_cors.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/migrations/Version20220512114436.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/migrations/Version20220514183402.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/admin/leaft/loca.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/admin/leaft/loca.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/build/entrypoints.json" beforeDir="false" afterPath="$PROJECT_DIR$/public/build/entrypoints.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/build/js/app.175df780.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/build/manifest.json" beforeDir="false" afterPath="$PROJECT_DIR$/public/build/manifest.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/DataFixtures/AppFixtures.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/DataFixtures/AppFixtures.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Entity/Article.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entity/Article.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Entity/User.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entity/User.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Form/ArticleType.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Form/ArticleType.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Repository/ArticleRepository.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Repository/ArticleRepository.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Repository/UserRepository.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Repository/UserRepository.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/admin/article/_form.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/admin/article/_form.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/admin/article/index.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/admin/article/index.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/admin/template/sidebar.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/admin/template/sidebar.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/admin1/article/_form.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/admin1/article/_form.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/admin1/article/index.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/admin1/article/index.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/base.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/base.html.twig" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
-  <component name="ComposerSettings" doNotAsk="true">
+  <component name="ComposerSettings" doNotAsk="true" synchronizationState="SYNCHRONIZE">
     <pharConfigPath>$PROJECT_DIR$/composer.json</pharConfigPath>
     <execution />
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+  <component name="JsbtTreeLayoutManager">
+    <layout place="tools.popupnpm">
+      <scroll-view-position x="0" y="0" />
+    </layout>
+  </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
   </component>
   <component name="PhpWorkspaceProjectConfiguration">
     <include_path>
-      <path value="$PROJECT_DIR$/vendor/fig/link-util" />
       <path value="$PROJECT_DIR$/vendor/scienta/doctrine-json-functions" />
       <path value="$PROJECT_DIR$/vendor/jms/metadata" />
       <path value="$PROJECT_DIR$/vendor/behat/transliterator" />
+      <path value="$PROJECT_DIR$/vendor/fig/link-util" />
       <path value="$PROJECT_DIR$/vendor/phpdocumentor/reflection-docblock" />
       <path value="$PROJECT_DIR$/vendor/phpdocumentor/reflection-common" />
       <path value="$PROJECT_DIR$/vendor/phpdocumentor/type-resolver" />
@@ -170,6 +211,7 @@
       <path value="$PROJECT_DIR$/vendor/phpspec/prophecy" />
       <path value="$PROJECT_DIR$/vendor/friendsofphp/proxy-manager-lts" />
       <path value="$PROJECT_DIR$/vendor/symfony/ux-chartjs" />
+      <path value="$PROJECT_DIR$/../../Program Files/Symfony" />
     </include_path>
   </component>
   <component name="ProjectId" id="2AKaSv6E2JtLystVej466rhcHhR" />
@@ -184,16 +226,59 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_package_manager_path" value="npm" />
+    <property name="php.override.implement.member.chooser.php.doc" value="NONE" />
+    <property name="settings.editor.selected.configurable" value="preferences.externalTools" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\logiciel\allcine\templates\vente_article" />
+      <recent name="C:\logiciel\allcine\templates\vente" />
       <recent name="C:\logiciel\allcine" />
       <recent name="C:\logiciel\allcine\config" />
       <recent name="C:\logiciel\allcine\templates\superadmin" />
-      <recent name="C:\logiciel\allcine\templates" />
-      <recent name="C:\logiciel\allcine\src\Controller\Admin" />
     </key>
+  </component>
+  <component name="RunManager" selected="Shell Script.symfony Start">
+    <configuration name="Unnamed" type="ComposerRunConfigurationType" factoryName="Composer Script" nameIsGenerated="true">
+      <option name="commandLineParameters" value="" />
+      <option name="pathToComposerJson" value="$PROJECT_DIR$/composer.json" />
+      <option name="script" value="auto-scripts" />
+      <method v="2" />
+    </configuration>
+    <configuration name="Unnamed" type="CompoundRunConfigurationType">
+      <method v="2" />
+    </configuration>
+    <configuration name="loca.js" type="NodeJSConfigurationType" nameIsGenerated="true" path-to-js-file="loca.js" working-dir="$PROJECT_DIR$/public/admin/leaft">
+      <method v="2" />
+    </configuration>
+    <configuration name="symfony serve " type="PhpLocalRunConfigurationType" factoryName="PHP Console" path="$PROJECT_DIR$/../../Program Files/Symfony/symfony.exe">
+      <method v="2">
+        <option name="ToolBeforeRunTask" enabled="true" actionId="Tool_symfony_serve start" />
+      </method>
+    </configuration>
+    <configuration name="symfony Start" type="ShConfigurationType">
+      <option name="SCRIPT_TEXT" value="" />
+      <option name="INDEPENDENT_SCRIPT_PATH" value="false" />
+      <option name="SCRIPT_PATH" value="$PROJECT_DIR$/../../Program Files/Symfony/symfony.exe" />
+      <option name="SCRIPT_OPTIONS" value="" />
+      <option name="INDEPENDENT_SCRIPT_WORKING_DIRECTORY" value="true" />
+      <option name="SCRIPT_WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="INDEPENDENT_INTERPRETER_PATH" value="true" />
+      <option name="INTERPRETER_PATH" value="" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="EXECUTE_IN_TERMINAL" value="true" />
+      <option name="EXECUTE_SCRIPT_FILE" value="true" />
+      <envs />
+      <method v="2" />
+    </configuration>
+    <list>
+      <item itemvalue="Composer Script.Unnamed" />
+      <item itemvalue="Compound.Unnamed" />
+      <item itemvalue="Node.js.loca.js" />
+      <item itemvalue="PHP Script.symfony serve " />
+      <item itemvalue="Shell Script.symfony Start" />
+    </list>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
@@ -207,7 +292,44 @@
       <workItem from="1654768260021" duration="7467000" />
       <workItem from="1654775969161" duration="454000" />
       <workItem from="1654776497650" duration="455000" />
+      <workItem from="1654777033874" duration="4947000" />
+      <workItem from="1654862699778" duration="1790000" />
+      <workItem from="1655206446447" duration="1611000" />
+      <workItem from="1655748215276" duration="1217000" />
+      <workItem from="1655794758780" duration="628000" />
+      <workItem from="1655834389865" duration="43000" />
+      <workItem from="1656071468484" duration="1029000" />
+      <workItem from="1656086180037" duration="300000" />
+      <workItem from="1656342512792" duration="881000" />
+      <workItem from="1656393979540" duration="183000" />
+      <workItem from="1656433607082" duration="29000" />
+      <workItem from="1656481253168" duration="1285000" />
+      <workItem from="1656483381662" duration="479000" />
+      <workItem from="1656483934051" duration="1842000" />
+      <workItem from="1656495430570" duration="2331000" />
+      <workItem from="1656504133417" duration="744000" />
+      <workItem from="1656778898585" duration="5678000" />
+      <workItem from="1657181236293" duration="386000" />
+      <workItem from="1657182120404" duration="2967000" />
+      <workItem from="1657264812661" duration="20340000" />
+      <workItem from="1657526842572" duration="1391000" />
+      <workItem from="1657528306813" duration="235000" />
+      <workItem from="1657528715081" duration="1647000" />
+      <workItem from="1657530388586" duration="1859000" />
+      <workItem from="1657559615722" duration="6379000" />
+      <workItem from="1657606032852" duration="13904000" />
+      <workItem from="1657711774655" duration="3146000" />
+      <workItem from="1657737947784" duration="15461000" />
+      <workItem from="1657805120365" duration="1937000" />
     </task>
+    <task id="LOCAL-00001" summary="new1">
+      <created>1654778048813</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1654778048813</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

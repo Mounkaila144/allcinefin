@@ -1,0 +1,39 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}VenteFilm index{% endblock %}
+
+{% block body %}
+    <h1>VenteFilm index</h1>
+
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>UpdatAt</th>
+                <th>Film</th>
+                <th>Prix</th>
+                <th>actions</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for vente_film in vente_films %}
+            <tr>
+                <td>{{ vente_film.id }}</td>
+                <td>{{ vente_film.updatAt ? vente_film.updatAt|date('Y-m-d H:i:s') : '' }}</td>
+                <td>{{ vente_film.film }}</td>
+                <td>{{ vente_film.prix }}</td>
+                <td>
+                    <a href="{{ path('app_vente_film_show', {'id': vente_film.id}) }}">show</a>
+                    <a href="{{ path('app_vente_film_edit', {'id': vente_film.id}) }}">edit</a>
+                </td>
+            </tr>
+        {% else %}
+            <tr>
+                <td colspan="5">no records found</td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+    <a href="{{ path('app_vente_film_new') }}">Create new</a>
+{% endblock %}

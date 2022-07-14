@@ -15,7 +15,8 @@ use Symfony\Component\Security\Core\User\UserInterface;
  * @UniqueEntity(fields={"email"}, message="There is already an account with this email")
  */
 #[ORM\Entity(repositoryClass: UserRepository::class)]
-#[ORM\Index(name: 'user', columns: ['nom', 'prenom'], flags: ['fulltext'])]
+#[ORM\Table(name: '`user`')]
+#[ORM\Index(name: 'user', columns: ['nom', 'prenom','email','username'], flags: ['fulltext'])]
 #[ApiResource]
 class User implements UserInterface, PasswordAuthenticatedUserInterface
 {
@@ -63,10 +64,19 @@ class User implements UserInterface, PasswordAuthenticatedUserInterface
     #[ORM\Column(type: 'string', length: 50)]
     private $telephone;
 
+    #[ORM\OneToMany(mappedBy: 'user', targetEntity: VenteArticle::class)]
+    private $venteArticles;
+
+    #[ORM\OneToMany(mappedBy: 'user', targetEntity: VenteFilm::class)]
+    private $venteFilms;
+
     public function __construct()
     {
         $this->commandes = new ArrayCollection();
         $this->tests = new ArrayCollection();
+        $this->venteArticles = new ArrayCollection();
+        $this->venteFIlms = new ArrayCollection();
+        $this->venteFilms = new ArrayCollection();
     }
 
 
@@ -304,5 +314,64 @@ class User implements UserInterface, PasswordAuthenticatedUserInterface
         return $this;
     }
 
+    /**
+     * @return Collection<int, VenteArticle>
+     */
+    public function getVenteArticles(): Collection
+    {
+        return $this->venteArticles;
+    }
+
+    public function addVenteArticle(VenteArticle $venteArticle): self
+    {
+        if (!$this->venteArticles->contains($venteArticle)) {
+            $this->venteArticles[] = $venteArticle;
+            $venteArticle->setUser($this);
+        }
+
+        return $this;
+    }
+
+    public function removeVenteArticle(VenteArticle $venteArticle): self
+    {
+        if ($this->venteArticles->removeElement($venteArticle)) {
+            // set the owning side to null (unless already changed)
+            if ($venteArticle->getUser() === $this) {
+                $venteArticle->setUser(null);
+            }
+        }
+
+        return $this;
+    }
+
+    /**
+     * @return Collection<int, VenteFilm>
+     */
+    public function getVenteFilms(): Collection
+    {
+        return $this->venteFilms;
+    }
+
+    public function addVenteFilm(VenteFilm $venteFilm): self
+    {
+        if (!$this->venteFilms->contains($venteFilm)) {
+            $this->venteFilms[] = $venteFilm;
+            $venteFilm->setUser($this);
+        }
+
+        return $this;
+    }
+
+    public function removeVenteFilm(VenteFilm $venteFilm): self
+    {
+        if ($this->venteFilms->removeElement($venteFilm)) {
+            // set the owning side to null (unless already changed)
+            if ($venteFilm->getUser() === $this) {
+                $venteFilm->setUser(null);
+            }
+        }
+
+        return $this;
+    }
 
 }
