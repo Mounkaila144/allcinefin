@@ -107,17 +107,6 @@ export default function HeaderPhone() {
                             >
                                 <ShoppingCartIcon/>
                             </Button>
-                            {decode.roles.includes('ROLE_ADMIN') ||decode.roles.includes('ROLE_SUPER_ADMIN')?
-                            <Button
-                                variant="contained"
-                                sx={{
-                                    my: 2, color: 'white', display: 'block', backgroundColor: pink[900], marginLeft: 3
-                                }}
-                                onClick={admin}
-
-                            >
-                                <AdminPanelSettingsIcon/>
-                            </Button>:null}
 
                         </> : <>
                             <Box sx={{display: {xs: 'flex', md: 'none'},width:130,height:35,marginTop:2}}>
@@ -160,17 +149,6 @@ export default function HeaderPhone() {
                             >
                                 <ShoppingCartIcon/>
                             </Button>
-                            {decode.roles.includes('ROLE_ADMIN') ||decode.roles.includes('ROLE_SUPER_ADMIN')?
-                                <Button
-                                    variant="contained"
-                                    sx={{
-                                        my: 2, color: 'white', display: 'block', backgroundColor: pink[900], marginLeft: 3
-                                    }}
-                                    onClick={admin}
-
-                                >
-                                    <AdminPanelSettingsIcon/>
-                                </Button>:null}
                         </> : <>
                             <Button
                                 variant="contained"
