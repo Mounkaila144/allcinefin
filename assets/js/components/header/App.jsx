@@ -63,14 +63,14 @@ export default function HeaderPhone() {
                 name1={"populair"} lien1={"/film/popular"}
                 name2={"nouveauté"} lien2={"/film/new"}
                 name3={"plus vues"} lien3={"/film/top"}
-                name4={"Trier par genre"} lien4={"/filmlist"}
+                name4={"Trier par genre"} lien4={"/film/genrelist"}
             />
             <Btnderoulan
                 name={"Serie"}
                 name1={"populair"} lien1={"/serie/popular"}
                 name2={"nouveauté"} lien2={"/serie/new"}
                 name3={"plus vues"} lien3={"/serie/top"}
-                name4={"Trier par genre"} lien4={"/serielist"}
+                name4={"Trier par genre"} lien4={"/serie/genrelist"}
             />
             <Button
                 variant="contained"

@@ -184,13 +184,13 @@ export default function HeaderDesing(props) {
                         <NestedBtn setOpen={setOpen} name={"Populair"} link={"/film/popular"}/>
                         <NestedBtn setOpen={setOpen} name={"Nouveauté"} link={"/film/new"}/>
                         <NestedBtn setOpen={setOpen} name={"plus vue"} link={"/film/top"}/>
-                        <NestedBtn setOpen={setOpen} name={"Trier par genre"} link={"/filmlist"}/>
+                        <NestedBtn setOpen={setOpen} name={"Trier par genre"} link={"/film/genrelist"}/>
                     </NestedList>
                     <NestedList name={"Serie"}>
                         <NestedBtn setOpen={setOpen} name={"Populair"} link={"/serie/popular"}/>
                         <NestedBtn setOpen={setOpen} name={"Nouveauté"} link={"/serie/new"}/>
                         <NestedBtn setOpen={setOpen} name={"plus vue"} link={"/serie/top"}/>
-                        <NestedBtn setOpen={setOpen} name={"Trier par genre"} link={"/serielist"}/>
+                        <NestedBtn setOpen={setOpen} name={"Trier par genre"} link={"/serie/genrelist"}/>
                     </NestedList>
                     <ListItemButton onClick={materiel}
                                     sx={{color: 'white'}}>
