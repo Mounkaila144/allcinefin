@@ -1,10 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="5a86381a-87a8-4208-8690-425eae3f060d" name="Changes" comment="final 1">
+    <list default="true" id="5a86381a-87a8-4208-8690-425eae3f060d" name="Changes" comment="final 2">
+      <change afterPath="$PROJECT_DIR$/src/Controller/ApiController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.env" beforeDir="false" afterPath="$PROJECT_DIR$/.env" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/config/packages/nelmio_cors.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/config/packages/nelmio_cors.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/routes.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/config/routes.yaml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -192,7 +194,7 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../allcine227react" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="php.override.implement.member.chooser.php.doc" value="NONE" />
     <property name="settings.editor.selected.configurable" value="preferences.externalTools" />
@@ -288,7 +290,10 @@
       <workItem from="1657606032852" duration="13904000" />
       <workItem from="1657711774655" duration="3146000" />
       <workItem from="1657737947784" duration="15461000" />
-      <workItem from="1657805120365" duration="6321000" />
+      <workItem from="1657805120365" duration="7648000" />
+      <workItem from="1657869230946" duration="621000" />
+      <workItem from="1657890060239" duration="8149000" />
+      <workItem from="1657962774455" duration="1015000" />
     </task>
     <task id="LOCAL-00001" summary="new1">
       <created>1654778048813</created>
@@ -304,7 +309,14 @@
       <option name="project" value="LOCAL" />
       <updated>1657810850166</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="final 2">
+      <created>1657827092441</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1657827092441</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -324,6 +336,7 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="new1" />
     <MESSAGE value="final 1" />
-    <option name="LAST_COMMIT_MESSAGE" value="final 1" />
+    <MESSAGE value="final 2" />
+    <option name="LAST_COMMIT_MESSAGE" value="final 2" />
   </component>
 </project>
