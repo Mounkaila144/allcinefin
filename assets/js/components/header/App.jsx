@@ -22,9 +22,14 @@ import jwt_decode from "jwt-decode";
 export default function HeaderPhone() {
     const signOut = useSignOut()
     const auth = useIsAuthenticated()
-    const token = localStorage.getItem('token')
-    var decode=jwt_decode(token)
-
+    if (localStorage.getItem("token") === null) {
+        console.log("Nulllll")
+    }
+    else {
+        const token = localStorage.getItem('token')
+        var decode=jwt_decode(token)
+        console.log(decode)
+    }
     let navigate = useNavigate();
 
     function handleClick() {
@@ -41,7 +46,7 @@ export default function HeaderPhone() {
     }
 
     return (<HeaderDesing
-        logo={<img src={Allcine} width={150}/>}
+        logo={<img src={Allcine} width={151}/>}
         btnflexsm={<>
             <Button
                 variant="contained"
@@ -108,6 +113,18 @@ export default function HeaderPhone() {
                                 <ShoppingCartIcon/>
                             </Button>
 
+                            {decode.roles.includes('ROLE_ADMIN') ||decode.roles.includes('ROLE_SUPER_ADMIN')?
+                            <Button
+                                variant="contained"
+                                sx={{
+                                    my: 2, color: 'white', display: 'block', backgroundColor: pink[900], marginLeft: 3
+                                }}
+                                onClick={admin}
+
+                            >
+                                <AdminPanelSettingsIcon/>
+                            </Button>:null}
+
                         </> : <>
                             <Box sx={{display: {xs: 'flex', md: 'none'},width:130,height:35,marginTop:2}}>
                                 { <img src={Allcine}/>}
@@ -149,6 +166,17 @@ export default function HeaderPhone() {
                             >
                                 <ShoppingCartIcon/>
                             </Button>
+                            {decode.roles.includes('ROLE_ADMIN') ||decode.roles.includes('ROLE_SUPER_ADMIN')?
+                                <Button
+                                    variant="contained"
+                                    sx={{
+                                        my: 2, color: 'white', display: 'block', backgroundColor: pink[900], marginLeft: 3
+                                    }}
+                                    onClick={admin}
+
+                                >
+                                    <AdminPanelSettingsIcon/>
+                                </Button>:null}
                         </> : <>
                             <Button
                                 variant="contained"
