@@ -40,7 +40,7 @@ export default function PubCard({products}) {
     const [page, setPage] = React.useState(1);
 
 
-    const url=`https://allcine227/api/pub.json?page=${page}`
+    const url=`https://allcine227.com/api/pub.json?page=${page}`
     const getData =async () => {
         axios
             .get(url,{
@@ -86,7 +86,7 @@ bgcolor:"grey.900"
                     playing
                     width={"100%"}
                     height={"100%"}
-                    url={`https://allcine227/image/${products.videoName}`}/>
+                    url={`https://allcine227.com/image/${products.videoName}`}/>
                 <ThemeProvider theme={theme}>
                     <Typography component="h3" color={"white"}>
                         {products.nom}

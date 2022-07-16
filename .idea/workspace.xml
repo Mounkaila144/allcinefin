@@ -1,30 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="5a86381a-87a8-4208-8690-425eae3f060d" name="Changes" comment="final 4">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/js/components/header/App.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/assets/js/components/header/App.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/routes.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/config/routes.yaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/build/14.62d12db1.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/build/14.62d12db1.js.LICENSE.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/build/395.3a40b0a8.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/build/395.a311bc16.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/build/395.a311bc16.js.LICENSE.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/build/417.792d4aac.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/build/app.734f32a9.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/build/app.b1d5c1ab.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/build/entrypoints.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/build/images/V4.991e7768.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/build/images/logo7.bb4a7f8a.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/build/js/app.8ca42e0d.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/build/manifest.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/build/runtime.49bb7348.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Controller/ApiController.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Controller/AuthController.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Controller/ReactController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/ReactController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Controller/SecurityController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/SecurityController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/webpack.config.js" beforeDir="false" afterPath="$PROJECT_DIR$/webpack.config.js" afterDir="false" />
-    </list>
+    <list default="true" id="5a86381a-87a8-4208-8690-425eae3f060d" name="Changes" comment="final 4" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -311,7 +288,7 @@
       <workItem from="1657869230946" duration="621000" />
       <workItem from="1657890060239" duration="8149000" />
       <workItem from="1657962774455" duration="4676000" />
-      <workItem from="1657984784531" duration="8028000" />
+      <workItem from="1657984784531" duration="8682000" />
     </task>
     <task id="LOCAL-00001" summary="new1">
       <created>1654778048813</created>
@@ -348,7 +325,14 @@
       <option name="project" value="LOCAL" />
       <updated>1657994906921</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="final 4">
+      <created>1657995762286</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1657995762286</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

@@ -21,7 +21,7 @@ function Panier() {
     const auth = useAuthUser()
     const [aalert,setAlert]=useState(false)
     const [c, setC] = useState(0);
-    const url = `https://allcine227/api/commandes`
+    const url = `https://allcine227.com/api/commandes`
     const token = localStorage.getItem('token')
     var decode=jwt_decode(token)
     console.log(decode)
