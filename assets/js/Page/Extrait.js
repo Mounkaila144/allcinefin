@@ -26,7 +26,7 @@ const Extrait = () => {
     const [page, setPage] = React.useState(1);
 
 
-    const url = `https://allcine227.com/api/pubs.json?page=${page}`
+    const url = `https://127.0.0.1:8000/api/pubs.json?page=${page}`
     const getData = async () => {
         axios
             .get(url, {
@@ -69,12 +69,12 @@ const Extrait = () => {
                                 title: products.nom,
                                 sources: [
                                     {
-                                        src: `https://allcine227.com/video/${products.videoName}`,
+                                        src: `https://127.0.0.1:8000/video/${products.videoName}`,
                                         type: 'video/mp4',
                                         size: 360,
                                     },
                                 ],
-                                poster: `https://allcine227.com/image/video/${products.imageName}`,
+                                poster: `https://127.0.0.1:8000/image/video/${products.imageName}`,
                             }}
                         />
                         <CardActions

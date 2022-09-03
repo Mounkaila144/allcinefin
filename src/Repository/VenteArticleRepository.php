@@ -44,6 +44,76 @@ class VenteArticleRepository extends ServiceEntityRepository
             $this->_em->flush();
         }
     }
+    public function search($user = null ,$from = null, $to = null){
+        $query = $this->createQueryBuilder('a');
+        if($user != null){
+            $query->leftJoin('a.user','u')
+                ->andWhere('u.id=:id')
+                ->setParameter('id', $user);
+        }
+        if ($from != null and $to!=null) {
+            $query->andwhere('a.updatAt BETWEEN :from AND :to')
+                ->setParameter('from', $from->format('y-m-d').' 00:00:00')
+                ->setParameter('to', $to->format('y-m-d').' 23:59:59');
+        }
+
+        return $query->getQuery()->getResult();
+    }
+    public function sum()
+    {
+        $query = $this->createQueryBuilder('a');
+        $query->select('SUM(a.quantite) AS total');
+
+
+        return $query->getQuery()->getSingleScalarResult();
+    }
+
+    public function jour()
+    {
+        $time=new \DateTime('@'.strtotime('now'));
+        $debut=$time->format('y-m-d').' 00:00:00';
+        $fin  =$time->format('y-m-d').' 23:59:59';
+        $query = $this->createQueryBuilder('a');
+        $query
+            ->Where("a.updatAt >= '".$debut."'")
+            ->andWhere("a.updatAt <= '".$fin."'")
+            ->select('SUM(a.quantite) AS total');
+
+
+        return $query->getQuery()->getSingleScalarResult();
+    }
+     public function findbyday($d)
+    {
+        $day=sprintf("%02d",$d);
+        $time=new \DateTime('@'.strtotime('now'));
+        $debut=$time->format("y-m-$day").' 00:00:00';
+        $fin  =$time->format("y-m-$day").' 23:59:59';
+        $query = $this->createQueryBuilder('a');
+        $query
+            ->Where("a.updatAt >= '".$debut."'")
+            ->andWhere("a.updatAt <= '".$fin."'")
+            ->select('SUM(a.quantite) AS total');
+
+
+        return $query->getQuery()->getSingleScalarResult();
+    }
+
+
+    public function moi()
+    {
+        $time = new \DateTime('@' . strtotime('now'));
+        $debut = $time->format('y-m-01') . ' 00:00:00';
+        $fin = $time->format('y-m-t') . ' 23:59:59';
+        $query = $this->createQueryBuilder('a');
+        $query
+            ->Where("a.updatAt >= '" . $debut . "'")
+            ->andWhere("a.updatAt <= '" . $fin . "'")
+            ->select('SUM(a.quantite) AS total');
+
+
+        return $query->getQuery()->getSingleScalarResult();
+    }
+
 
     // /**
     //  * @return VenteArticle[] Returns an array of VenteArticle objects

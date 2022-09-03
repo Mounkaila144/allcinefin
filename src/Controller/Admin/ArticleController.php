@@ -4,8 +4,10 @@ namespace App\Controller\Admin;
 
 use App\Entity\Article;
 use App\Form\ArticleType;
+use App\Form\SearchArticleType;
 use App\Repository\ArticleRepository;
 use Doctrine\ORM\EntityManagerInterface;
+use Knp\Component\Pager\PaginatorInterface;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
@@ -14,11 +16,36 @@ use Symfony\Component\Routing\Annotation\Route;
 #[Route('admin/article',name:'admin_')]
 class ArticleController extends AbstractController
 {
-    #[Route('/', name: 'article_index', methods: ['GET'])]
-    public function index(ArticleRepository $articleRepository): Response
+    #[Route('/', name: 'article_index', methods: ['GET','POST'])]
+    public function index(ArticleRepository $articleRepository,Request $request,
+                          PaginatorInterface $paginator): Response
     {
+        $article = $articleRepository->findAll();
+
+        $form = $this->createForm(SearchArticleType::class);
+
+        $search = $form->handleRequest($request);
+        $pagearticles=$paginator->paginate(
+            $article, // Requête contenant les données à paginer (ici nos articles)
+            $request->query->getInt('page', 1), // Numéro de la page en cours, passé dans l'URL, 1 si aucune page
+            5 // Nombre de résultats par page
+        );
+        if($form->isSubmitted() && $form->isValid()){
+            // On recherche les article correspondant aux mots clés
+            $article = $articleRepository->search(
+                $search->get('mots')->getData(),
+
+            );
+            $pagearticles=$paginator->paginate(
+                $article, // Requête contenant les données à paginer (ici nos articles)
+                $request->query->getInt('page', 1), // Numéro de la page en cours, passé dans l'URL, 1 si aucune page
+                5 // Nombre de résultats par page
+            );
+        }
         return $this->render('admin/article/index.html.twig', [
-            'articles' => $articleRepository->findAll(),
+            'articles' => $pagearticles,
+            'form' => $form->createView(),
+            'totalvendu'=>$articleRepository->Totalvendu()
         ]);
     }
 

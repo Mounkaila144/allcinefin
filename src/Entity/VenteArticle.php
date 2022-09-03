@@ -18,7 +18,7 @@ class VenteArticle
     private $id;
 
     #[Gedmo\Timestampable(on:"create")]
-    #[ORM\Column(type: 'datetime_immutable')]
+    #[ORM\Column(type: 'datetime')]
     private $updatAt;
 
     #[ORM\ManyToOne(targetEntity: User::class, inversedBy: 'venteArticles')]
@@ -32,12 +32,14 @@ class VenteArticle
     #[ORM\Column(type: 'integer')]
     private $quantite;
 
+
+
     public function getId(): ?int
     {
         return $this->id;
     }
 
-    public function getUpdatAt(): ?\DateTimeImmutable
+    public function getUpdatAt(): ?\DateTime
     {
         return $this->updatAt;
     }
@@ -77,4 +79,5 @@ class VenteArticle
 
         return $this;
     }
+
 }

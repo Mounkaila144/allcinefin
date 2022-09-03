@@ -16,7 +16,7 @@ use Symfony\Component\Security\Core\User\UserInterface;
  */
 #[ORM\Entity(repositoryClass: UserRepository::class)]
 #[ORM\Table(name: '`user`')]
-#[ORM\Index(name: 'user', columns: ['nom', 'prenom','email','username'], flags: ['fulltext'])]
+#[ORM\Index(name: 'user', columns: ['nom', 'prenom','username'], flags: ['fulltext'])]
 #[ApiResource]
 class User implements UserInterface, PasswordAuthenticatedUserInterface
 {
@@ -82,7 +82,7 @@ class User implements UserInterface, PasswordAuthenticatedUserInterface
 
     public function __toString(): string
     {
-        return $this->getId();
+        return $this->getNom();
     }
 
 

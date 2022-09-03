@@ -1,16 +1,29 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}client index{% endblock %}
+{% block title %}Liste Clients{% endblock %}
 
 {% block body %}
+    {{ form_start(form) }}
+    <div class="row">
+        <div class="col-lg-3 col-md-4">
+            {{ form_row(form.mots) }}
 
-    <h2>
-        client
-    </h2>
-    {{ form(form) }}
+        </div>
+        <div class="col-lg-2 col-md-2">
+            {{ form_row(form.Rechercher) }}
+
+        </div>
+        <div class="col-lg-6 col-md-4">
+            <h2 style="text-align: center" class="bg-gray-700 text-white">
+                Liste des clients
+            </h2>
+        </div>
+
+    </div>
+    {{ form_end(form) }}
 
     <div class="table-responsive">
-                    <table class="table table-bordered">
+                    <table class="table table-bordered bg-gray-700 text-white">
                         <thead>
                         <tr>
                             <th>Id</th>
@@ -36,7 +49,7 @@
                                 <td>{{ client.prenom }}</td>
                                 <td>{{ client.adresse}}</td>
                                 <td>
-                                    <a href="{{ path('admin_client_show', {'id': client.id}) }}"><button type="submit" class="btn btn-primary me-2">Localiser</button></a>
+                                    <a href="{{ path('admin_client_show', {'id': client.id}) }}"><button type="submit" class="btn btn-success me-2">Localiser</button></a>
                                 </td>
                                 {% if is_granted('ROLE_SUPER_ADMIN') %}
                                     <td>
@@ -58,5 +71,7 @@
                         {% endfor %}
                         </tbody>
                     </table>
+        {{ knp_pagination_render(clients,'pagination.html.twig') }}
+
     </div>
 {% endblock %}

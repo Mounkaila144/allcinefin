@@ -62,6 +62,13 @@ class VenteController extends AbstractController
                     ->setQuantite($v);
                 $venteArticleRepository->add($vente);
                 $articleRepository->add($article->setQuantiteVendue($new), true);
+                $nom=$artic->getNom();
+                if ($v==1) {
+                    $this->addFlash('success', "$v $nom a été Vendue");
+                }
+                else{
+                    $this->addFlash('success', "$v $nom ont été Vendue");
+                }
 
             }
         }

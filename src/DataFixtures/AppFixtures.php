@@ -5,6 +5,7 @@ namespace App\DataFixtures;
 use App\Entity\Article;
 use App\Entity\Pub;
 use App\Entity\User;
+use App\Entity\VenteFilm;
 use App\Repository\UserRepository;
 use Doctrine\Bundle\FixturesBundle\Fixture;
 use Doctrine\Persistence\ObjectManager;
@@ -21,7 +22,7 @@ class AppFixtures extends Fixture
     public function load(ObjectManager $manager): void
     {
         $faker = Factory::create("fr_FR");
-        for ($i = 0; $i <= 10; $i++) {
+        for ($i = 0; $i <= 50; $i++) {
             $article = new Article();
             $article
                 ->setNom($faker->userName)
@@ -29,6 +30,7 @@ class AppFixtures extends Fixture
                 ->setPrice($faker->numberBetween(3000, 500))
                 ->setQuantiteVendue($faker->numberBetween(10, 50))
                 ->setQuantiteInitial($faker->numberBetween(50, 400))
+                ->setAlert($faker->numberBetween(3,10))
                 ->setImageName("1-626f9c40e86e4320259172.png");
             $manager->persist($article);
 
@@ -36,6 +38,7 @@ class AppFixtures extends Fixture
                 $user = new User();
             $password = $this->hasher->hashPassword($user, '90145781');
             $user->setNom($faker->name)
+                ->setRoles(["ROLE_ADMIN"])
                     ->setUsername($faker->name)
                     ->setAdresse($faker->address)
                     ->setTelephone($faker->phoneNumber)
@@ -47,7 +50,6 @@ class AppFixtures extends Fixture
                     ->setPrenom($faker->lastName);
                 $manager->persist($user);
             }
-
 
             $manager->flush();
         }

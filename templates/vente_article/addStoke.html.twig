@@ -1,14 +1,30 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}New VenteArticle{% endblock %}
+{% block title %}Ajouter au Stoke{% endblock %}
 
 {% block body %}
-    <h2>
-        article
-    </h2>
+    {{ form_start(form) }}
+    <div class="row">
+        <div class="col-lg-3 col-md-4 col-sm-8">
+            {{ form_row(form.mots) }}
 
+        </div>
+        <div class="col-lg-2 col-md-2 col-sm-4">
+            {{ form_row(form.Rechercher) }}
+        </div>
+
+        <div class="col-lg-4 col-md-4 border-danger text-white">
+            <h2 style="text-align: center;background-color: rgba(101,201,8,0.83)">
+                Ajouter au Stoke
+            </h2>
+        </div>
+        <div class="col-lg-2 col-md-2 border-danger">
+        </div>
+
+    </div>
+    {{ form_end(form) }}
     <div class="table-responsive">
-        <table class="table table-bordered">
+        <table class="table table-bordered text-white" style="background-color: rgba(98,196,6,0.83)">
             <thead>
             <tr>
                 <th>Id</th>
@@ -16,7 +32,7 @@
                 <th>Prix de Vente</th>
                 <th>Image</th>
                 <th>Quantite Restant</th>
-                <th></th>
+                <th>Ajouter</th>
             </tr>
             </thead>
             <tbody>
@@ -30,8 +46,10 @@
                     <td>{{ restant }}</td>
                     <td>
                         <form method="post" action="{{ path('add', {'id': article.id})}}">
-                            <input type="number" min="1" max="1000" required name="nom">
-                            <button type="submit" class="btn btn-primary me-2">OK</button>
+                            <label>
+                                <input type="number" min="1" max="1000" required name="nom">
+                            </label>
+                            <button type="submit" class="btn btn-primary me-2">Ajouter</button>
                         </form>
                     </td>
                 </tr>
@@ -42,6 +60,8 @@
             {% endfor %}
             </tbody>
         </table>
+        {{ knp_pagination_render(articles,'pagination.html.twig') }}
+
     </div>
 
 {% endblock %}

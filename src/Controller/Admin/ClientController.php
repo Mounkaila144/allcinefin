@@ -7,6 +7,7 @@ use App\Form\SearchclientType;
 use App\Form\UserType;
 use App\Repository\UserRepository;
 use Doctrine\ORM\EntityManagerInterface;
+use Knp\Component\Pager\PaginatorInterface;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
@@ -17,23 +18,33 @@ class ClientController extends AbstractController
 {
 
     #[Route('/', name: 'client_index', methods: ['GET','POST'])]
-    public function index(UserRepository $clientRepository,Request $request): Response
+    public function index(UserRepository $clientRepository,Request $request,PaginatorInterface $paginator): Response
     {
         $clients = $clientRepository->findAll();
 
         $form = $this->createForm(SearchclientType::class);
 
         $search = $form->handleRequest($request);
-
+        $pageclients=$paginator->paginate(
+            $clients, // Requête contenant les données à paginer (ici nos articles)
+            $request->query->getInt('page', 1), // Numéro de la page en cours, passé dans l'URL, 1 si aucune page
+            8 // Nombre de résultats par page
+        );
         if($form->isSubmitted() && $form->isValid()){
             // On recherche les clients correspondant aux mots clés
             $clients = $clientRepository->search(
                 $search->get('mots')->getData(),
+
+            );
+            $pageclients=$paginator->paginate(
+                $clients, // Requête contenant les données à paginer (ici nos articles)
+                $request->query->getInt('page', 1), // Numéro de la page en cours, passé dans l'URL, 1 si aucune page
+                8// Nombre de résultats par page
             );
         }
 
         return $this->render('admin/client/index.html.twig', [
-            'clients' => $clients,
+            'clients' => $pageclients,
             'form' => $form->createView()
         ]);
     }

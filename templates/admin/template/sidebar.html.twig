@@ -9,7 +9,10 @@
                 </div>
                 <div class="d-block">
                     <h2 class="h5 mb-3">Administrateur</h2>
-                    <a href="{{ path('app_logout') }}"
+                    <a data-bs-toggle="collapse"
+                   data-bs-target="#sidebarMenu" aria-controls="sidebarMenu" aria-expanded="true"
+                   aria-label="Toggle navigation"
+                            href="{{ path('app_logout') }}"
                        class="btn btn-secondary btn-sm d-inline-flex align-items-center">
                         <svg class="icon icon-xxs me-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"
                              xmlns="http://www.w3.org/2000/svg">
@@ -45,7 +48,10 @@
 
 
             <li class="nav-item  active ">
-                <a href="{{ path('dashboard') }}" class="nav-link">
+                <a data-bs-toggle="collapse"
+                   data-bs-target="#sidebarMenu" aria-controls="sidebarMenu" aria-expanded="true"
+                   aria-label="Toggle navigation"
+                        href="{{ path('app_admin') }}" class="nav-link">
                     <span class="sidebar-icon">
                         <svg class="icon icon-xs me-2" fill="currentColor" viewBox="0 0 20 20"
                              xmlns="http://www.w3.org/2000/svg"><path
@@ -57,7 +63,10 @@
             </li>
 
             <li class="nav-item">
-                <a href="{{ path('admin_client_localisation') }}" class="nav-link">
+                <a data-bs-toggle="collapse"
+                   data-bs-target="#sidebarMenu" aria-controls="sidebarMenu" aria-expanded="true"
+                   aria-label="Toggle navigation"
+                        href="{{ path('admin_client_localisation') }}" class="nav-link">
                     <span class="sidebar-icon">
                         <svg class="icon icon-xs me-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"
                              xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round"
@@ -70,7 +79,10 @@
                 </a>
             </li>
             <li class="nav-item">
-                <a href="{{ path('admin_client_index') }}" class="nav-link">
+                <a data-bs-toggle="collapse"
+                   data-bs-target="#sidebarMenu" aria-controls="sidebarMenu" aria-expanded="true"
+                   aria-label="Toggle navigation"
+                        href="{{ path('admin_client_index') }}" class="nav-link">
                     <span class="sidebar-icon">
                         <svg class="icon icon-xs me-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"
                              xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round"
@@ -82,7 +94,10 @@
             </li>
             {% if is_granted('ROLE_SUPER_ADMIN') %}
                 <li class="nav-item">
-                <a href="{{ path('admin_vendeur_index')}}" class="nav-link">
+                <a data-bs-toggle="collapse"
+                   data-bs-target="#sidebarMenu" aria-controls="sidebarMenu" aria-expanded="true"
+                   aria-label="Toggle navigation"
+                        href="{{ path('admin_vendeur_index')}}" class="nav-link">
                     <span class="sidebar-icon">
                          <svg class="icon icon-xs me-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"
                               xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round"
@@ -97,7 +112,10 @@
 
 
             <li class="nav-item">
-                <a href="{{ path('admin_article_index') }}" class="nav-link">
+                <a data-bs-toggle="collapse"
+                   data-bs-target="#sidebarMenu" aria-controls="sidebarMenu" aria-expanded="true"
+                   aria-label="Toggle navigation"
+                        href="{{ path('admin_article_index') }}" class="nav-link">
                     <span class="sidebar-icon">
                        <svg class="icon icon-xs me-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"
                             xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round"
@@ -108,7 +126,10 @@
                 </a>
             </li>
             <li class="nav-item">
-                <a href="{{ path('app_panier_index') }}" class="nav-link">
+                <a data-bs-toggle="collapse"
+                   data-bs-target="#sidebarMenu" aria-controls="sidebarMenu" aria-expanded="true"
+                   aria-label="Toggle navigation"
+                        href="{{ path('app_panier_index') }}" class="nav-link">
                     <span class="sidebar-icon">
                       <svg class="icon icon-xs me-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"
                            xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round"
@@ -116,17 +137,6 @@
                                                                     d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z"></path></svg>
                     </span>
                     <span class="sidebar-text">Commande recu</span>
-                </a>
-            </li>
-            <li class="nav-item">
-                <a href="{{ path('app_vente') }}" class="nav-link">
-                    <span class="sidebar-icon">
-                      <svg class="icon icon-xs me-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"
-                           xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round"
-                                                                    stroke-width="2"
-                                                                    d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z"></path></svg>
-                    </span>
-                    <span class="sidebar-text">vente</span>
                 </a>
             </li>
 
@@ -156,21 +166,69 @@
                     <ul class="flex-column nav">
 
                         <li class="nav-item">
-                                <a class="nav-link" href="{{ path('app_vente_article_new')}}">
+                                <a data-bs-toggle="collapse"
+                   data-bs-target="#sidebarMenu" aria-controls="sidebarMenu" aria-expanded="true"
+                   aria-label="Toggle navigation"class="nav-link"
+                                   href="{{ path('app_vente_article_new')}}">
                                     <span class="sidebar-text">Vente Article</span></a>
                         </li>
                         <li class="nav-item">
-                                <a class="nav-link" href="{{ path('app_vente_film_new')}}">
+                                <a data-bs-toggle="collapse"
+                   data-bs-target="#sidebarMenu" aria-controls="sidebarMenu" aria-expanded="true"
+                   aria-label="Toggle navigation"class="nav-link"
+                                   href="{{ path('app_vente_film_new')}}">
                                     <span class="sidebar-text">Vente Ciné</span></a>
                         </li>
 
                         <li class="nav-item">
-                                <a class="nav-link" href="{{ path('app_add_article_new')}}">
+                                <a data-bs-toggle="collapse"
+                   data-bs-target="#sidebarMenu" aria-controls="sidebarMenu" aria-expanded="true"
+                   aria-label="Toggle navigation"class="nav-link"
+                                   href="{{ path('app_add_article_new')}}">
                                     <span class="sidebar-text">Ajouter au stoke</span></a>
                         </li>
+
+                    </ul>
+                </div>
+            </li>
+            <li class="nav-item">
+                   <span class="nav-link  collapsed  d-flex justify-content-between align-items-center"
+                         data-bs-toggle="collapse" data-bs-target="#submenu-component-2">
+                   <span>
+                   <span class="sidebar-icon">
+                         <svg class="icon icon-xs me-2" fill="currentColor" viewBox="0 0 20 20"
+                              xmlns="http://www.w3.org/2000/svg"><path
+                                     fill-rule="evenodd"
+                                     d="M2 5a2 2 0 012-2h8a2 2 0 012 2v10a2 2 0 002 2H4a2 2 0 01-2-2V5zm3 1h6v4H5V6zm6 6H5v2h6v-2z"
+                                     clip-rule="evenodd"></path><path
+                                     d="M15 7h1a2 2 0 012 2v5.5a1.5 1.5 0 01-3 0V7z"></path></svg>
+                   </span>
+                   <span class="sidebar-text">Historique</span>
+                   </span>
+                   <span class="link-arrow">
+                         <svg class="icon icon-sm" fill="currentColor" viewBox="0 0 20 20"
+                              xmlns="http://www.w3.org/2000/svg"><path
+                                     fill-rule="evenodd"
+                                     d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z"
+                                     clip-rule="evenodd"></path></svg>
+                   </span>
+                   </span>
+                <div class="multi-level collapse " role="list" id="submenu-component-2" aria-expanded="false">
+                    <ul class="flex-column nav">
+
                         <li class="nav-item">
-                            <a class="nav-link" href="{{ path('app_vente_article_index') }}">
-                                <span class="sidebar-text">Historique Article</span></a>
+                            <a data-bs-toggle="collapse"
+                   data-bs-target="#sidebarMenu" aria-controls="sidebarMenu" aria-expanded="true"
+                   aria-label="Toggle navigation"class="nav-link"
+                               href="{{ path('app_vente_article_index') }}">
+                                <span class="sidebar-text">Vente Article</span></a>
+                        </li>
+                        <li class="nav-item">
+                            <a data-bs-toggle="collapse"
+                   data-bs-target="#sidebarMenu" aria-controls="sidebarMenu" aria-expanded="true"
+                   aria-label="Toggle navigation"class="nav-link"
+                               href="{{ path('app_vente_film_index') }}">
+                                <span class="sidebar-text">Vente Film</span></a>
                         </li>
 
                     </ul>
@@ -178,7 +236,10 @@
             </li>
 
             <li class="nav-item">
-                <a href="{{ path('admin_pub_index') }}" class="nav-link">
+                <a data-bs-toggle="collapse"
+                   data-bs-target="#sidebarMenu" aria-controls="sidebarMenu" aria-expanded="true"
+                   aria-label="Toggle navigation"
+                        href="{{ path('admin_pub_index') }}" class="nav-link">
                     <span class="sidebar-icon">
                         <svg class="icon icon-xs me-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"
                              xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round"
@@ -189,10 +250,27 @@
                 </a>
             </li>
 
+            <li class="nav-item">
+                <a href="{{ path('app_stoke') }}" class="nav-link">
+                    <span class="sidebar-icon">
+                       <svg class="icon icon-xs me-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                            xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round"
+                                                                     stroke-width="2"
+                                                                     d="M8 10h.01M12 10h.01M16 10h.01M9 16H5a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v8a2 2 0 01-2 2h-5l-5 5v-5z"></path></svg>
+                    </span>
+                    <span class="sidebar-text">Alert Stoke</span>
+                    <span class="badge badge-sm bg-danger badge-pill notification-count">{{ nb.b|join(',') }}</span>
+
+                </a>
+            </li>
+
             <li role="separator" class="dropdown-divider mt-4 mb-3 border-gray-700"></li>
 
             <li class="nav-item">
-                <a href="{{ path('app_logout') }}" class="nav-link">
+                <a data-bs-toggle="collapse"
+                   data-bs-target="#sidebarMenu" aria-controls="sidebarMenu" aria-expanded="true"
+                   aria-label="Toggle navigation"
+                        href="{{ path('app_logout') }}" class="nav-link">
                     <span class="sidebar-icon">
                         <svg class="icon icon-xs me-2" fill="currentColor" viewBox="0 0 20 20"
                              xmlns="http://www.w3.org/2000/svg"><path

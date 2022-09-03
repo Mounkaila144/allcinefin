@@ -2,24 +2,80 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="5a86381a-87a8-4208-8690-425eae3f060d" name="Changes" comment="final 6">
-      <change afterPath="$PROJECT_DIR$/public/build/991.3a40b0a8.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/build/991.afe9637c.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/build/991.afe9637c.js.LICENSE.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/build/app.734f32a9.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/build/app.b1d5c1ab.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/build/js/app.f2eee58d.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Form/SearchArticleType.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Form/SearchVenteArticleType.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Form/SearchfilmType.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Service/nb.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/Boutique-master.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/Boutique-master.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/js/components/header/App.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/assets/js/components/header/App.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/js/components/header/HederDesing.js" beforeDir="false" afterPath="$PROJECT_DIR$/assets/js/components/header/HederDesing.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/build/123.04b1892b.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/build/123.dde26c72.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/build/123.dde26c72.js.LICENSE.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/build/app.b4109b38.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/build/app.c45f2c61.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/controllers.json" beforeDir="false" afterPath="$PROJECT_DIR$/assets/controllers.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/js/Page/Extrait.js" beforeDir="false" afterPath="$PROJECT_DIR$/assets/js/Page/Extrait.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/js/Page/Login.js" beforeDir="false" afterPath="$PROJECT_DIR$/assets/js/Page/Login.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/js/Page/Materiel/DetailMateriel.js" beforeDir="false" afterPath="$PROJECT_DIR$/assets/js/Page/Materiel/DetailMateriel.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/js/Page/Materiel/Original.js" beforeDir="false" afterPath="$PROJECT_DIR$/assets/js/Page/Materiel/Original.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/js/Page/Panier.js" beforeDir="false" afterPath="$PROJECT_DIR$/assets/js/Page/Panier.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/js/Page/produis.js" beforeDir="false" afterPath="$PROJECT_DIR$/assets/js/Page/produis.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/js/components/Cart/Data.js" beforeDir="false" afterPath="$PROJECT_DIR$/assets/js/components/Cart/Data.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/js/components/Pagination.js" beforeDir="false" afterPath="$PROJECT_DIR$/assets/js/components/Pagination.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/js/components/card/MaterialCard.js" beforeDir="false" afterPath="$PROJECT_DIR$/assets/js/components/card/MaterialCard.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/js/components/card/PubCard.js" beforeDir="false" afterPath="$PROJECT_DIR$/assets/js/components/card/PubCard.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/js/components/ivoice/index.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/assets/js/components/ivoice/index.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/composer.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/composer.lock" beforeDir="false" afterPath="$PROJECT_DIR$/composer.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/bundles.php" beforeDir="false" afterPath="$PROJECT_DIR$/config/bundles.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/packages/security.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/config/packages/security.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/packages/twig.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/config/packages/twig.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/migrations/Version20220712070217.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/migrations/Version20220712084544.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/build/14.62d12db1.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/build/14.62d12db1.js.LICENSE.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/build/417.792d4aac.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/build/991.3a40b0a8.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/build/991.afe9637c.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/build/991.afe9637c.js.LICENSE.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/build/app.734f32a9.js" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/public/build/entrypoints.json" beforeDir="false" afterPath="$PROJECT_DIR$/public/build/entrypoints.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/build/js/app.a216d3c5.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/build/js/app.f2eee58d.js" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/public/build/manifest.json" beforeDir="false" afterPath="$PROJECT_DIR$/public/build/manifest.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/webpack.config.js" beforeDir="false" afterPath="$PROJECT_DIR$/webpack.config.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/file/images/article/img-20210518-wa0048-62b0bb860f140714122455.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/public/file/images/article/1-626f9c40e86e4320259172.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Controller/Admin/AdminController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/Admin/AdminController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Controller/Admin/ArticleController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/Admin/ArticleController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Controller/Admin/ClientController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/Admin/ClientController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Controller/ReactController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/ReactController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Controller/SecurityController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/SecurityController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Controller/VenteArticleController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/VenteArticleController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Controller/VenteController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/VenteController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Controller/VenteFilmController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/VenteFilmController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/DataFixtures/AppFixtures.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/DataFixtures/AppFixtures.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Entity/Article.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entity/Article.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Entity/User.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entity/User.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Entity/VenteArticle.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entity/VenteArticle.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Entity/VenteFilm.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entity/VenteFilm.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Form/ArticleType.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Form/ArticleType.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Form/SearchclientType.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Form/SearchclientType.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Form/VenteFilmType.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Form/VenteFilmType.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Repository/ArticleRepository.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Repository/ArticleRepository.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Repository/UserRepository.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Repository/UserRepository.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Repository/VenteArticleRepository.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Repository/VenteArticleRepository.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Repository/VenteFilmRepository.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Repository/VenteFilmRepository.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/symfony.lock" beforeDir="false" afterPath="$PROJECT_DIR$/symfony.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/admin/article/_form.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/admin/article/_form.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/admin/article/index.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/admin/article/index.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/admin/client/index.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/admin/client/index.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/admin/dashboard.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/admin/dashboard.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/admin/template/navbar.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/admin/template/navbar.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/admin/template/sidebar.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/admin/template/sidebar.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/base.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/base.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/vente_article/addStoke.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/vente_article/addStoke.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/vente_article/index.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/vente_article/index.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/vente_article/new.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/vente_article/new.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/vente_film/_form.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/vente_film/_form.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/vente_film/index.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/vente_film/index.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/vente_film/new.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/vente_film/new.html.twig" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -195,6 +251,13 @@
       <path value="$PROJECT_DIR$/vendor/friendsofphp/proxy-manager-lts" />
       <path value="$PROJECT_DIR$/vendor/symfony/ux-chartjs" />
       <path value="$PROJECT_DIR$/../../Program Files/Symfony" />
+      <path value="$PROJECT_DIR$/vendor/symfony/ux-swup" />
+      <path value="$PROJECT_DIR$/vendor/guzzlehttp/psr7" />
+      <path value="$PROJECT_DIR$/vendor/ralouphie/getallheaders" />
+      <path value="$PROJECT_DIR$/vendor/intervention/image" />
+      <path value="$PROJECT_DIR$/vendor/psr/http-message" />
+      <path value="$PROJECT_DIR$/vendor/psr/http-factory" />
+      <path value="$PROJECT_DIR$/vendor/symfony/ux-cropperjs" />
     </include_path>
   </component>
   <component name="ProjectId" id="2AKaSv6E2JtLystVej466rhcHhR" />
@@ -215,11 +278,11 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\logiciel\allcine\src" />
+      <recent name="C:\logiciel\allcine\src\Form" />
+      <recent name="C:\logiciel\allcine\src\Repository" />
+      <recent name="C:\logiciel\allcine\templates" />
       <recent name="C:\logiciel\allcine\templates\vente_article" />
-      <recent name="C:\logiciel\allcine\templates\vente" />
-      <recent name="C:\logiciel\allcine" />
-      <recent name="C:\logiciel\allcine\config" />
-      <recent name="C:\logiciel\allcine\templates\superadmin" />
     </key>
   </component>
   <component name="RunManager" selected="Shell Script.symfony Start">
@@ -309,6 +372,44 @@
       <workItem from="1657962774455" duration="4676000" />
       <workItem from="1657984784531" duration="10079000" />
       <workItem from="1657999415751" duration="1431000" />
+      <workItem from="1658042541880" duration="7482000" />
+      <workItem from="1658056047221" duration="12761000" />
+      <workItem from="1658143211816" duration="12904000" />
+      <workItem from="1658211763602" duration="18859000" />
+      <workItem from="1658300750674" duration="11263000" />
+      <workItem from="1658326952017" duration="12779000" />
+      <workItem from="1658388689396" duration="3418000" />
+      <workItem from="1658426778379" duration="281000" />
+      <workItem from="1658427163527" duration="3444000" />
+      <workItem from="1658477561219" duration="27037000" />
+      <workItem from="1658555189041" duration="9056000" />
+      <workItem from="1658684571342" duration="895000" />
+      <workItem from="1658866424090" duration="3213000" />
+      <workItem from="1658905023899" duration="3191000" />
+      <workItem from="1658912559498" duration="3162000" />
+      <workItem from="1658950013881" duration="816000" />
+      <workItem from="1658959182900" duration="1116000" />
+      <workItem from="1658995384080" duration="601000" />
+      <workItem from="1659254074934" duration="303000" />
+      <workItem from="1659254823723" duration="254000" />
+      <workItem from="1659255153426" duration="2183000" />
+      <workItem from="1659340288748" duration="585000" />
+      <workItem from="1659355088837" duration="55000" />
+      <workItem from="1659424939508" duration="755000" />
+      <workItem from="1659467332028" duration="1548000" />
+      <workItem from="1659530717795" duration="102000" />
+      <workItem from="1659871564616" duration="4140000" />
+      <workItem from="1660051756431" duration="1479000" />
+      <workItem from="1660591782512" duration="94000" />
+      <workItem from="1660592355175" duration="203000" />
+      <workItem from="1660652245310" duration="1674000" />
+      <workItem from="1660724536068" duration="882000" />
+      <workItem from="1660742747031" duration="318000" />
+      <workItem from="1660929135653" duration="2235000" />
+      <workItem from="1661064888356" duration="1131000" />
+      <workItem from="1661259353143" duration="2195000" />
+      <workItem from="1661354861819" duration="1902000" />
+      <workItem from="1662189055379" duration="1730000" />
     </task>
     <task id="LOCAL-00001" summary="new1">
       <created>1654778048813</created>
@@ -385,5 +486,16 @@
     <MESSAGE value="final 5" />
     <MESSAGE value="final 6" />
     <option name="LAST_COMMIT_MESSAGE" value="final 6" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="php">
+          <url>file://$PROJECT_DIR$/templates/admin/template/sidebar.html.twig</url>
+          <line>25</line>
+          <option name="timeStamp" value="2" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>

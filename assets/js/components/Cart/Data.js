@@ -39,7 +39,7 @@ export default itemSlice.reducer;
 
 // set up axios - simple json-server prototype config here
 const api = axios.create({
-    baseURL: "https://allcine227.com/api/articles.json",
+    baseURL: "https://127.0.0.1:8000/api/articles.json",
     withCredentials: false,
     headers: {
         Accept: "application/json",
@@ -51,7 +51,7 @@ const api = axios.create({
 export function fetchItems() {
     return async (dispatch) => {
         api
-            .get("https://allcine227.com/api/articles.json")
+            .get("https://127.0.0.1:8000/api/articles.json")
             .then((response) => {
                 dispatch(setItems(response.data));
             })
