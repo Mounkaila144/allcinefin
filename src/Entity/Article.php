@@ -12,7 +12,6 @@ use Vich\UploaderBundle\Mapping\Annotation as Vich;
 use Gedmo\Mapping\Annotation as Gedmo;
 
 #[ORM\Entity(repositoryClass: ArticleRepository::class)]
-#[ORM\Index(name: 'article', columns: ['nom'], flags: ['fulltext'])]
 #[Vich\Uploadable]
 #[ApiResource]
 class Article
@@ -40,9 +39,6 @@ class Article
 
     #[ORM\Column(type: 'string', length: 100)]
     private $nom;
-
-    #[ORM\Column(type: 'integer')]
-    private $alert;
 
     public function __toString(): string
     {
@@ -200,17 +196,6 @@ class Article
                 $venteArticle->setArticle(null);
             }
         }
-
-        return $this;
-    }
-    public function getAlert(): ?int
-    {
-        return $this->alert;
-    }
-
-    public function setAlert(int $alert): self
-    {
-        $this->alert = $alert;
 
         return $this;
     }

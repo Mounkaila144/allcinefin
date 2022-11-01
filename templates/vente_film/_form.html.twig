@@ -1,13 +1,4 @@
 {{ form_start(form) }}
-<div class="row content-center-l">
-    <div class="col-lg-10 col-md-4 col-sm-8">
-        {{ form_row(form.film) }}
-
-    </div>
-    <div class="col-lg-2 col-md-2 col-sm-4">
-        {{ form_row(form.prix) }}
-    </div>
-
-</div>
-<button class="btn btn-primary">{{ button_label|default('Vendu') }}</button>
+    {{ form_widget(form) }}
+    <button class="btn">{{ button_label|default('Save') }}</button>
 {{ form_end(form) }}

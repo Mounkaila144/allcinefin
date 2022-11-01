@@ -17,13 +17,13 @@ class SearchclientType extends AbstractType
                 'label' => false,
                 'attr' => [
                     'class' => 'form-control',
-                    'placeholder' => 'Recherche'
+                    'placeholder' => 'Entrez un ou plusieurs mots-clés'
                 ],
                 'required' => false
             ])
             ->add('Rechercher', SubmitType::class, [
                 'attr' => [
-                    'class' => 'btn-primary',
+                    'class' => 'btn primary',
                 ]
             ])
         ;

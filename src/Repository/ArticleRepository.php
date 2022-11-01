@@ -19,7 +19,6 @@ class ArticleRepository extends ServiceEntityRepository
     {
         parent::__construct($registry, Article::class);
     }
-
     public function add(Article $entity, bool $flush = false): void
     {
         $this->getEntityManager()->persist($entity);
@@ -27,47 +26,6 @@ class ArticleRepository extends ServiceEntityRepository
         if ($flush) {
             $this->getEntityManager()->flush();
         }
-    }
-
-    public function search($mots = null)
-    {
-        $query = $this->createQueryBuilder('a');
-        if ($mots != null) {
-            $query->andWhere('MATCH_AGAINST(a.nom) AGAINST (:mots boolean)>0')
-                ->setParameter('mots', $mots);
-        }
-
-        return $query->getQuery()->getResult();
-    }
-
-    public function alert()
-    {
-        $query = $this->createQueryBuilder('a');
-        $query->Where('a.alert >=a.quantiteInitial - a.quantiteVendue');
-
-        return $query->getQuery()->getResult();
-    }
-
-    /**
-     * @throws \Doctrine\ORM\NonUniqueResultException
-     * @throws \Doctrine\ORM\NoResultException
-     */
-
-    public function sum()
-    {
-        $query = $this->createQueryBuilder('a');
-        $query->select('SUM(a.quantiteVendue) AS total');
-
-
-        return $query->getQuery()->getSingleScalarResult();
-    }
-    public function Totalvendu()
-    {
-        $query = $this->createQueryBuilder('a');
-        $query->select('SUM(a.price*a.quantiteInitial) AS total');
-
-
-        return $query->getQuery()->getSingleScalarResult();
     }
 
     // /**

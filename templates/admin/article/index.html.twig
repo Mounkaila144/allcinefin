@@ -3,28 +3,12 @@
 {% block title %}article index{% endblock %}
 
 {% block body %}
+    <h2>
+        article
+    </h2>
 
-    {{ form_start(form) }}
-    <div class="row">
-        <div class="col-lg-3 col-md-4">
-            {{ form_row(form.mots) }}
-
-        </div>
-        <div class="col-lg-2 col-md-2">
-            {{ form_row(form.Rechercher) }}
-
-        </div>
-        <div class="col-lg-3 col-md-4">
-            <h2 style="text-align: center" class="bg-white text-gray-900">
-                Liste des Article
-            </h2>
-        </div>
-
-    </div>
-    {{ form_end(form) }}
-    <span>total: {{ totalvendu }}</span>
     <div class="table-responsive">
-                    <table class="table table-bordered bg-white text-gray-900">
+                    <table class="table table-bordered">
                             <thead>
                             <tr>
                                 <th>Id</th>
@@ -35,7 +19,6 @@
                                 <th>Quantite Initial</th>
                                 <th>Quantite Vendu</th>
                                 <th>Quantite Restant</th>
-                                <th>Alert</th>
                                 <th></th>
                             </tr>
                             </thead>
@@ -50,7 +33,6 @@
                                     <td>{{ article.quantiteInitial }}</td>
                                     <td>{{ article.quantiteVendue }}</td>
                                     <td>{{ article.quantiteInitial - article.quantiteVendue }}</td>
-                                    <td>{{ article.alert }}</td>
                                 <td>
                                     <a href="{{ path('admin_article_edit', {'id': article.id}) }}"><button type="submit" class="btn btn-primary me-2">Moifier</button></a>
                                 </td>
@@ -60,7 +42,6 @@
                                         <button type="submit" class="btn btn-danger me-2">Suprimer</button>
                                     </form>
                                 </td>
-
                             </tr>
                         {% else %}
                             <tr>
@@ -69,7 +50,6 @@
                         {% endfor %}
                         </tbody>
                     </table>
-        {{ knp_pagination_render(articles,'pagination.html.twig') }}
     </div>
 
     <a href="{{ path('admin_article_new') }}"><button type="submit" class="btn btn-primary me-2">Ajouter</button></a>

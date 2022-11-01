@@ -9,7 +9,6 @@ use Gedmo\Mapping\Annotation as Gedmo;
 
 
 #[ORM\Entity(repositoryClass: VenteFilmRepository::class)]
-#[ORM\Index(name: 'venteFlim', columns: ['film'], flags: ['fulltext'])]
 #[ApiResource]
 class VenteFilm
 {
@@ -19,7 +18,7 @@ class VenteFilm
     private $id;
 
     #[Gedmo\Timestampable(on:"create")]
-    #[ORM\Column(type: 'datetime')]
+    #[ORM\Column(type: 'datetime_immutable')]
     private $updatAt;
 
     #[ORM\Column(type: 'string', length: 255)]
@@ -37,7 +36,7 @@ class VenteFilm
         return $this->id;
     }
 
-    public function getUpdatAt(): ?\DateTime
+    public function getUpdatAt(): ?\DateTimeImmutable
     {
         return $this->updatAt;
     }

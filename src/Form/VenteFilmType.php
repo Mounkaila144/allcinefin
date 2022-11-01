@@ -13,7 +13,8 @@ class VenteFilmType extends AbstractType
     {
         $builder
             ->add('film')
-            ->add('prix');
+            ->add('prix')
+        ;
     }
 
     public function configureOptions(OptionsResolver $resolver): void

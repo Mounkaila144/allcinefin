@@ -45,25 +45,6 @@ class VenteFilmRepository extends ServiceEntityRepository
         }
     }
 
-    public function search($mots = null, $user = null ,$from = null, $to = null){
-        $query = $this->createQueryBuilder('a');
-        if($mots != null){
-            $query->andWhere('MATCH_AGAINST(a.film) AGAINST (:mots boolean)>0')
-                ->setParameter('mots', $mots);
-        }
-        if($user != null){
-            $query->leftJoin('a.user','u')
-                ->andWhere('u.id=:id')
-                ->setParameter('id', $user);
-        }
-        if ($from != null and $to!=null) {
-            $query->andwhere('a.updatAt BETWEEN :from AND :to')
-                ->setParameter('from', $from->format('y-m-d').' 00:00:00')
-                ->setParameter('to', $to->format('y-m-d').' 23:59:59');
-        }
-
-        return $query->getQuery()->getResult();
-    }
     // /**
     //  * @return VenteFilm[] Returns an array of VenteFilm objects
     //  */

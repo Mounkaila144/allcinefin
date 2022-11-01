@@ -129,12 +129,6 @@
     "gedmo/doctrine-extensions": {
         "version": "v3.4.0"
     },
-    "guzzlehttp/psr7": {
-        "version": "2.4.0"
-    },
-    "intervention/image": {
-        "version": "2.7.2"
-    },
     "jms/metadata": {
         "version": "2.6.1"
     },
@@ -248,20 +242,11 @@
     "psr/event-dispatcher": {
         "version": "1.0.0"
     },
-    "psr/http-factory": {
-        "version": "1.0.1"
-    },
-    "psr/http-message": {
-        "version": "1.0.1"
-    },
     "psr/link": {
         "version": "2.0.1"
     },
     "psr/log": {
         "version": "3.0.0"
-    },
-    "ralouphie/getallheaders": {
-        "version": "3.0.3"
     },
     "scienta/doctrine-json-functions": {
         "version": "4.4.0"
@@ -653,12 +638,6 @@
     },
     "symfony/ux-chartjs": {
         "version": "v2.1.1"
-    },
-    "symfony/ux-cropperjs": {
-        "version": "v2.3.0"
-    },
-    "symfony/ux-swup": {
-        "version": "v2.3.0"
     },
     "symfony/validator": {
         "version": "6.0",

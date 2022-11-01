@@ -3,48 +3,16 @@
 {% block title %}VenteFilm index{% endblock %}
 
 {% block body %}
-        {{ form_start(form) }}
-<div class="row">
-    <div class="col-lg-2 col-md-2 col-sm-8">
-        {{ form_row(form.mots) }}
+    <h1>VenteFilm index</h1>
 
-    </div>
-    <div class="col-lg-3 col-md-3 col-sm-8">
-        {{ form_row(form.user) }}
-
-    </div>
-
-    <div class="col-lg-3 col-md-4 col-sm-8">
-        {{ form_row(form.from) }}
-
-    </div>
-    <div class="col-lg-4 col-md-4 col-sm-8">
-        {{ form_row(form.to) }}
-
-    </div>
-
-</div>
-<div class="row">
-    <div class="col-lg-4 col-md-2 col-sm-4">
-        {{ form_row(form.Rechercher) }}
-    </div>
-
-    <div class="col-lg-4 col-md-4 border-danger text-white">
-        <h2 style="text-align: center;background-color: rgba(185,4,4,0.83)">
-            Historique des ventes
-        </h2>
-    </div>
-</div>
-{{ form_end(form) }}
-<div class="table-responsive">
-    <table class="table table-bordered text-white" style="background-color: rgba(185,4,4,0.83)">
+    <table class="table">
         <thead>
             <tr>
                 <th>Id</th>
                 <th>UpdatAt</th>
                 <th>Film</th>
-                <th>vendue par</th>
                 <th>Prix</th>
+                <th>actions</th>
             </tr>
         </thead>
         <tbody>
@@ -53,8 +21,11 @@
                 <td>{{ vente_film.id }}</td>
                 <td>{{ vente_film.updatAt ? vente_film.updatAt|date('Y-m-d H:i:s') : '' }}</td>
                 <td>{{ vente_film.film }}</td>
-                <td>{{ vente_film.user.nom }}</td>
                 <td>{{ vente_film.prix }}</td>
+                <td>
+                    <a href="{{ path('app_vente_film_show', {'id': vente_film.id}) }}">show</a>
+                    <a href="{{ path('app_vente_film_edit', {'id': vente_film.id}) }}">edit</a>
+                </td>
             </tr>
         {% else %}
             <tr>
@@ -63,6 +34,6 @@
         {% endfor %}
         </tbody>
     </table>
-    {{ knp_pagination_render(vente_films,'pagination.html.twig') }}
-</div>
-    {% endblock %}
+
+    <a href="{{ path('app_vente_film_new') }}">Create new</a>
+{% endblock %}

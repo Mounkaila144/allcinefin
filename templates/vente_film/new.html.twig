@@ -3,8 +3,9 @@
 {% block title %}New VenteFilm{% endblock %}
 
 {% block body %}
-    <h2 style="text-align: center" class="bg-gray-700 text-white">
-       Vente Film Serie Manga
-    </h2>
+    <h1>Create new VenteFilm</h1>
+
     {{ include('vente_film/_form.html.twig') }}
+
+    <a href="{{ path('app_vente_film_index') }}">back to list</a>
 {% endblock %}
