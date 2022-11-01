@@ -12,7 +12,7 @@ const ItemsPage = () => {
 
     const products = [
         {
-            id: 99,
+            id: 9,
             nom: "Malm",
             price: 9900,
             quantity: 1
