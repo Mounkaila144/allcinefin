@@ -41,7 +41,7 @@ export default function HeaderPhone() {
         window.location.reload()
     }
  function admin() {
-        navigate(`/admin`)
+        navigate(`/connexion`)
         window.location.reload()
     }
 
