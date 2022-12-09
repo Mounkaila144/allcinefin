@@ -38,7 +38,7 @@ class Article
     private $quantiteInitial;
 
     #[ORM\Column(type: 'integer')]
-    private $quantiteVendue;
+    private $quantiteVendue=0;
 
     #[ORM\Column(type: 'string', length: 100)]
     private $nom;
