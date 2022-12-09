@@ -32,6 +32,9 @@ class VenteArticle
     #[ORM\Column(type: 'integer')]
     private $quantite;
 
+    #[ORM\Column(type: 'boolean', nullable: true)]
+    private $delect;
+
     public function getId(): ?int
     {
         return $this->id;
@@ -74,6 +77,18 @@ class VenteArticle
     public function setQuantite(int $quantite): self
     {
         $this->quantite = $quantite;
+
+        return $this;
+    }
+
+    public function getDelect(): ?bool
+    {
+        return $this->delect;
+    }
+
+    public function setDelect(bool $delect): self
+    {
+        $this->delect = $delect;
 
         return $this;
     }

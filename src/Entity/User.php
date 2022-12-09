@@ -44,10 +44,10 @@ class User implements UserInterface, PasswordAuthenticatedUserInterface
     private $adresse;
 
     #[ORM\Column(type: 'float')]
-    private $lon;
+    private $lon=2.1304998638662247;
 
     #[ORM\Column(type: 'float')]
-    private $lat;
+    private $lat=13.553824059077584;
 
     #[ORM\Column(type: 'boolean')]
     private $isVerified = false;
@@ -59,7 +59,7 @@ class User implements UserInterface, PasswordAuthenticatedUserInterface
     private $tests;
 
     #[ORM\Column(type: 'string', length: 50, nullable: true)]
-    private $username;
+    private $username="Allcine";
 
     #[ORM\Column(type: 'string', length: 50)]
     private $telephone;
@@ -69,6 +69,9 @@ class User implements UserInterface, PasswordAuthenticatedUserInterface
 
     #[ORM\OneToMany(mappedBy: 'user', targetEntity: VenteFilm::class)]
     private $venteFilms;
+
+    #[ORM\Column(type: 'boolean', nullable: true)]
+    private $delect;
 
     public function __construct()
     {
@@ -370,6 +373,18 @@ class User implements UserInterface, PasswordAuthenticatedUserInterface
                 $venteFilm->setUser(null);
             }
         }
+
+        return $this;
+    }
+
+    public function getDelect(): ?bool
+    {
+        return $this->delect;
+    }
+
+    public function setDelect(?bool $delect): self
+    {
+        $this->delect = $delect;
 
         return $this;
     }

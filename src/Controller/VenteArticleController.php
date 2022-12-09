@@ -27,7 +27,7 @@ class VenteArticleController extends AbstractController
     {
 
         return $this->renderForm('vente_article/new.html.twig', [
-            'articles' => $articleRepository->findAll(),
+            'articles' => $articleRepository->findBy(['delect'=>false]),
         ]);
     }
 
@@ -36,7 +36,7 @@ class VenteArticleController extends AbstractController
     {
 
         return $this->renderForm('vente_article/addStoke.html.twig', [
-            'articles' => $articleRepository->findAll(),
+            'articles' => $articleRepository->findBy(['delect'=>false]),
         ]);
     }
 

@@ -2,7 +2,9 @@
 
 namespace App\Entity;
 
+use ApiPlatform\Core\Annotation\ApiFilter;
 use ApiPlatform\Core\Annotation\ApiResource;
+use ApiPlatform\Core\Bridge\Doctrine\Orm\Filter\BooleanFilter;
 use App\Repository\ArticleRepository;
 use Doctrine\Common\Collections\ArrayCollection;
 use Doctrine\Common\Collections\Collection;
@@ -14,6 +16,7 @@ use Gedmo\Mapping\Annotation as Gedmo;
 #[ORM\Entity(repositoryClass: ArticleRepository::class)]
 #[Vich\Uploadable]
 #[ApiResource]
+#[ApiFilter(BooleanFilter::class,properties: ['delect'])]
 class Article
 {
     #[ORM\Id]
@@ -57,6 +60,9 @@ class Article
 
     #[ORM\OneToMany(mappedBy: 'article', targetEntity: VenteArticle::class)]
     private $venteArticles;
+
+    #[ORM\Column(type: 'boolean', nullable: true)]
+    private $delect;
 
     public function __construct()
     {
@@ -196,6 +202,18 @@ class Article
                 $venteArticle->setArticle(null);
             }
         }
+
+        return $this;
+    }
+
+    public function getDelect(): ?bool
+    {
+        return $this->delect;
+    }
+
+    public function setDelect(?bool $delect): self
+    {
+        $this->delect = $delect;
 
         return $this;
     }

@@ -19,7 +19,7 @@ class ClientController extends AbstractController
     #[Route('/', name: 'client_index', methods: ['GET','POST'])]
     public function index(UserRepository $clientRepository,Request $request): Response
     {
-        $clients = $clientRepository->findAll();
+        $clients = $clientRepository->findBy(['delect'=>false]);
 
         $form = $this->createForm(SearchclientType::class);
 
@@ -42,7 +42,7 @@ class ClientController extends AbstractController
     public function localisation(UserRepository $clientRepository): Response
     {
         return $this->render('admin/client/localisation.html.twig', [
-            'clients' => $clientRepository->findAll(),
+            'clients' => $clientRepository->findBy(['delect'=>false]),
         ]);
     }
 

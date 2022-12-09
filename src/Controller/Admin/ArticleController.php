@@ -18,7 +18,7 @@ class ArticleController extends AbstractController
     public function index(ArticleRepository $articleRepository): Response
     {
         return $this->render('admin/article/index.html.twig', [
-            'articles' => $articleRepository->findAll(),
+            'articles' => $articleRepository->findBy(['delect'=>false]),
         ]);
     }
 
@@ -30,6 +30,8 @@ class ArticleController extends AbstractController
         $form->handleRequest($request);
 
         if ($form->isSubmitted() && $form->isValid()) {
+            $article->setDelect(false);
+
             $entityManager->persist($article);
             $entityManager->flush();
 
@@ -68,12 +70,24 @@ class ArticleController extends AbstractController
         ]);
     }
 
+//    #[Route('/{id}', name: 'article_delete', methods: ['POST'])]
+//    public function delete(Request $request, Article $article, EntityManagerInterface $entityManager): Response
+//    {
+//        if ($this->isCsrfTokenValid('delete'.$article->getId(), $request->request->get('_token'))) {
+//            $entityManager->remove($article);
+//            $entityManager->flush();
+//        }
+//
+//        return $this->redirectToRoute('admin_article_index', [], Response::HTTP_SEE_OTHER);
+//    }
     #[Route('/{id}', name: 'article_delete', methods: ['POST'])]
-    public function delete(Request $request, Article $article, EntityManagerInterface $entityManager): Response
+    public function delete(Request $request, Article $article, ArticleRepository $articleRepository): Response
     {
         if ($this->isCsrfTokenValid('delete'.$article->getId(), $request->request->get('_token'))) {
-            $entityManager->remove($article);
-            $entityManager->flush();
+
+            $articleRepository->add($article->setDelect(true), true);
+
+
         }
 
         return $this->redirectToRoute('admin_article_index', [], Response::HTTP_SEE_OTHER);
