@@ -19,6 +19,14 @@ class ReactController extends AbstractController
         ]);
     }
     /**
+     * @Route("/sucess",name="sucess")
+     */
+    public function inde(): Response
+    {
+        return $this->render('sucess.html.twig', []);
+    }
+
+    /**
      * @Route("/login", name="app_login",priority="-1",requirements={"reactRouting"=".+"}, defaults={"reactRouting": null})
      */
     public function login(): Response

@@ -30,6 +30,7 @@ class RegistrationController extends AbstractController
         $user = new User();
         $form = $this->createForm(RegistrationFormType::class, $user);
         $form->handleRequest($request);
+        $user->setDelect(false);
 
         if ($form->isSubmitted() && $form->isValid()) {
             // encode the plain password
@@ -53,7 +54,7 @@ class RegistrationController extends AbstractController
 //            );
             // do anything else you need here, like send an email
 
-            return $this->redirect('https://Allcine227.com/react/menu/');
+            return $this->redirectToRoute("sucess");
         }
 
         return $this->render('registration/register.html.twig', [

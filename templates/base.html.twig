@@ -70,6 +70,11 @@
 <body>
 {% include "admin/template/navbar.html.twig" %}
 {% include "admin/template/sidebar.html.twig" %}
+{% for message in app.flashes('success') %}
+    <div class="alert alert-success">
+        {{ message }}
+    </div>
+{% endfor %}
 <main class="content">
 
     <nav class="navbar navbar-top navbar-expand navbar-dashboard navbar-dark ps-0 pe-2 pb-0">
