@@ -44,13 +44,13 @@ class RegistrationController extends AbstractController
             $entityManager->flush();
 
             // generate a signed url and email it to the client
-            $this->emailVerifier->sendEmailConfirmation('app_verify_email', $user,
-                (new TemplatedEmail())
-                    ->from(new Address('niger@allcine227.com', 'All Ciné 227'))
-                    ->to($user->getEmail())
-                    ->subject("S'il-vous-plait Confirmé votre adresse Email")
-                    ->htmlTemplate('registration/confirmation_email.html.twig')
-            );
+//            $this->emailVerifier->sendEmailConfirmation('app_verify_email', $user,
+//                (new TemplatedEmail())
+//                    ->from(new Address('niger@allcine227.com', 'All Ciné 227'))
+//                    ->to($user->getEmail())
+//                    ->subject("S'il-vous-plait Confirmé votre adresse Email")
+//                    ->htmlTemplate('registration/confirmation_email.html.twig')
+//            );
             // do anything else you need here, like send an email
 
             return $this->redirect('https://Allcine227.com/react/menu/');
